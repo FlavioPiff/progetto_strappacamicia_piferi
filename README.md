@@ -73,10 +73,10 @@
 +  Data creazione account
 +   Icona account
 +   Per ogni livello di difficoltà (4 livelli di difficoltà):
-  1. Parite giocate
-  2. Movimenti più frequenti per ogni pezzo
-  3. Durata media partita
-  4. % vittorie e sconfitte
+1. Parite giocate
+2. Movimenti più frequenti per ogni pezzo
+3. Durata media partita
+4. % vittorie e sconfitte
   
 ##LINK MOTORE SCACCHISTICO
 
