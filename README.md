@@ -1,11 +1,11 @@
 # materiale_progetto
 
-Funzionalità applicazione:
+## Funzionalità applicazione:
 
--Fornire un'applicazione che permetta ad un'utente di giocare a scacchi tramite un'interfaccia grafica (funzionalità fondamentale)
-- Tener traccia dei dati di gioco e mostrarli accedendovi
++ Fornire un'applicazione che permetta ad un'utente di giocare a scacchi tramite un'interfaccia grafica (funzionalità fondamentale)
++ Tener traccia dei dati di gioco e mostrarli accedendovi
 
-Modalità di utilizzo:
+## Modalità di utilizzo:
 
 -Sfida con il computer
 
@@ -37,7 +37,7 @@ Modalità di utilizzo:
 2i)Ripetizione password
 
 
-Interfaccia:
+## Interfaccia:
 
 -Gioco a scacchi
 
