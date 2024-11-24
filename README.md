@@ -7,13 +7,13 @@
 
 ## Modalità di utilizzo:
 
-1. **Sfida con il computer**
+**1. Sfida con il computer**
 
 + Sfido a scacchi il computer
 + Ho una cronologia con le mosse fatte da me e dal computer
 + Ho la possibilità di scegliere la difficoltà dell'avversario
 
-2. **Accesso ai dati tramite account**
+**2. Accesso ai dati tramite account**
 
 + Posso accedere ad un menù che mi mostra i punteggi che ho ottenuto con il mio account:
 1. Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
@@ -22,7 +22,7 @@
 4. Movimenti più frequenti per ogni pezzo per ogni difficoltà
 5. Durata media partita per ogni difficoltà
 
-3. **Registrazione per giocare/accesso tramite nickname e password**
+**3. Registrazione per giocare/accesso tramite nickname e password**
 
 + Richiesta delle credenziali già create per giocare tramite nickname e password
 + Se non ancora registarto, pagina con campi obbligatori da compilare per la registrazione e quindi per poter giocare:
@@ -39,7 +39,7 @@
 
 ## Interfaccia:
 
-1. **Gioco a scacchi**
+**1. Gioco a scacchi**
 
 + Scacchiera con i vari pezzi
 + Cronologia delle mosse eseguite
@@ -48,13 +48,13 @@
 + Livello di difficoltà scelto
 + Scritta nickname vs CPU
 
-2. **Accesso utente**
+**2. Accesso utente**
 
 + Sfondo ben curato
 + Form per nickname
 + Form per password
 
-3. **Registrazione account**
+**3. Registrazione account**
 
 + Form per:
 1. Icona account
@@ -67,7 +67,7 @@
 8.  Password
 9.   Ripetizione password
 
-4. **Punteggi utente**
+**4. Punteggi utente**
 
 + Nickname
 +  Data creazione account
