@@ -57,15 +57,15 @@
 3. **Registrazione account**
 
 + Form per:
-  1. Icona account
-  2. Nome
-  3. Cognome
-  4. Sesso
-  5. Età
-  6. Paese di nascita
-  7. Nickname
-  8.  Password
-  9.   Ripetizione password
+1. Icona account
+2. Nome
+3. Cognome
+4. Sesso
+5. Età
+6. Paese di nascita
+7. Nickname
+8.  Password
+9.   Ripetizione password
 
 4. **Punteggi utente**
 
