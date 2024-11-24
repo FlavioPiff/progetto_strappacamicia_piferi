@@ -7,78 +7,77 @@
 
 ## Modalità di utilizzo:
 
--Sfida con il computer
+1. **Sfida con il computer**
 
-1)Sfido a scacchi il computer
-2)Ho una cronologia con le mosse fatte da me e dal computer
-3)ho la possibilità di scegliere la difficoltà dell'avversario
++ Sfido a scacchi il computer
++ Ho una cronologia con le mosse fatte da me e dal computer
++ Ho la possibilità di scegliere la difficoltà dell'avversario
 
--Accesso ai dati tramite account
+2. **Accesso ai dati tramite account**
 
-1)Posso accedere ad un menù che mi mostra i punteggi che ho ottenuto con il mio account
-1a)Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
-1b)Partite giocate
-1c)Vittorie/sconfitte per ogni livello di difficoltà
-1d)Movimenti più frequenti per ogni pezzo per ogni difficoltà
-1e)Durata media partita per ogni difficoltà
++ Posso accedere ad un menù che mi mostra i punteggi che ho ottenuto con il mio account:
+  1. Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
+  2. Partite giocate
+  3. Vittorie/sconfitte per ogni livello di difficoltà
+  4. Movimenti più frequenti per ogni pezzo per ogni difficoltà
+  5. Durata media partita per ogni difficoltà
 
--Registrazione per giocare/accesso tramite nickname e password
+3. **Registrazione per giocare/accesso tramite nickname e password**
 
-1)Richiesta delle credenziali già create per giocare tramite nickname e password
-2)Se non ancora registarto, pagina con campi obbligatori da compilare per la registrazione e quindi per poter giocare
-2a)Icona account
-2b)Nome
-2c)Cognome
-2d)Sesso
-2e)Età
-2f)Paese di nascita
-2g)Nickname
-2h)Password
-2i)Ripetizione password
++ Richiesta delle credenziali già create per giocare tramite nickname e password
++ Se non ancora registarto, pagina con campi obbligatori da compilare per la registrazione e quindi per poter giocare:
+  1. Icona account
+  2. Nome
+  3. Cognome
+  4. Sesso
+  5. Età
+  6. Paese di nascita
+  7. Nickname
+  8. Password
+  9. Ripetizione password
 
 
 ## Interfaccia:
 
--Gioco a scacchi
+1. **Gioco a scacchi**
 
-1)Scacchiera con i vari pezzi
-2)Cronologia delle mosse eseguite
-3)Pezzi "mangiati" da me e pezzi "mangiati" dall'avversario
-4)Cronometro della partita
-5)Livello di difficoltà scelto
-6)Scritta nickname vs CPU
++ Scacchiera con i vari pezzi
++ Cronologia delle mosse eseguite
++ Pezzi "mangiati" da me e pezzi "mangiati" dall'avversario
++ Cronometro della partita
++ Livello di difficoltà scelto
++ Scritta nickname vs CPU
 
--Accesso utente
+2. **Accesso utente**
 
-1)Sfondo ben curato
-2) Form x nickname
-3) Form x password
++ Sfondo ben curato
++ Form per nickname
++ Form per password
 
--Registrazione
+3. **Registrazione account**
 
-1)Form x
-1a)Icona account
-1b)Nome
-1c)Cognome
-1d)Sesso
-1e)Età
-1f)Paese di nascita
-1g)Nickname
-1h)Password
-1i)Ripeetizione password
++ Form per:
+  1. Icona account
+  2. Nome
+  3. Cognome
+  4. Sesso
+  5. Età
+  6. Paese di nascita
+  7. Nickname
+  8. Password
+  9. Ripetizione password
 
--Punteggi utente
+4. **Punteggi utente**
 
-1) Nickname
-2) Data creazione account
-3) Icona account
-4) Per ogni livello di difficoltà (5 livelli):
-   4a)Partite giocate
-   4b)Movimenti più frequenti per ogni pezzo
-   4c)Durata media partita
-   4d)% vittorie e sconfitte
-
-
++ Nickname
++  Data creazione account
++   Icona account
++   Per ogni livello di difficoltà (4 livelli di difficoltà):
+  1. Parite giocate
+  2. Movimenti più frequenti per ogni pezzo
+  3. Durata media partita
+  4. % vittorie e sconfitte
+  
 LINK MOTORE SCACCHISTICO
 
 - https://www.scacchi64.com/computer_stockfish.html
