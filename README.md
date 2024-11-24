@@ -1,4 +1,4 @@
-#                                                                                             materiale_progetto
+#Materiale Progetto
 
 ## Funzionalità applicazione:
 
@@ -16,25 +16,25 @@
 2. **Accesso ai dati tramite account**
 
 + Posso accedere ad un menù che mi mostra i punteggi che ho ottenuto con il mio account:
-  1. Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
-  2. Partite giocate
-  3. Vittorie/sconfitte per ogni livello di difficoltà
-  4. Movimenti più frequenti per ogni pezzo per ogni difficoltà
-  5. Durata media partita per ogni difficoltà
+1. Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
+2. Partite giocate
+3. Vittorie/sconfitte per ogni livello di difficoltà
+4. Movimenti più frequenti per ogni pezzo per ogni difficoltà
+5. Durata media partita per ogni difficoltà
 
 3. **Registrazione per giocare/accesso tramite nickname e password**
 
 + Richiesta delle credenziali già create per giocare tramite nickname e password
 + Se non ancora registarto, pagina con campi obbligatori da compilare per la registrazione e quindi per poter giocare:
-  1. Icona account
-  2. Nome
-  3. Cognome
-  4. Sesso
-  5. Età
-  6. Paese di nascita
-  7. Nickname
-  8. Password
-  9. Ripetizione password
+1. Icona account
+2. Nome
+3. Cognome
+4. Sesso
+5. Età
+6. Paese di nascita
+7. Nickname
+8. Password
+9. Ripetizione password
 
 
 ## Interfaccia:
@@ -57,15 +57,15 @@
 3. **Registrazione account**
 
 + Form per:
-  1. Icona account
-  2. Nome
-  3. Cognome
-  4. Sesso
-  5. Età
-  6. Paese di nascita
-  7. Nickname
-  8. Password
-  9. Ripetizione password
+1. Icona account
+2. Nome
+3. Cognome
+4. Sesso
+5. Età
+6. Paese di nascita
+7. Nickname
+8. Password
+9. Ripetizione password
 
 4. **Punteggi utente**
 
@@ -78,13 +78,13 @@
   3. Durata media partita
   4. % vittorie e sconfitte
   
-LINK MOTORE SCACCHISTICO
+##LINK MOTORE SCACCHISTICO
 
 - https://www.scacchi64.com/computer_stockfish.html
 
 - https://github.com/official-stockfish/Stockfish
 
-LINK GUI
+##LINK GUI
 
 - https://www.scacchi64.com/computer_arena.html
 
@@ -92,7 +92,7 @@ LINK GUI
   
 - http://www.playwitharena.de/
 
-LINK API
+##LINK API
 
 - https://github.com/anzemur/chess-api
 
