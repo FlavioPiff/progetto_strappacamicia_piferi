@@ -78,22 +78,22 @@
 3. Durata media partita
 4. % vittorie e sconfitte
   
-##LINK MOTORE SCACCHISTICO
+##LINK MOTORE SCACCHISTICO:
 
-- https://www.scacchi64.com/computer_stockfish.html
++ https://www.scacchi64.com/computer_stockfish.html
 
-- https://github.com/official-stockfish/Stockfish
++ https://github.com/official-stockfish/Stockfish
 
 ##LINK GUI
 
-- https://www.scacchi64.com/computer_arena.html
++ https://www.scacchi64.com/computer_arena.html
 
-- https://github.com/maksimKorzh/uci-gui
++ https://github.com/maksimKorzh/uci-gui
   
-- http://www.playwitharena.de/
++ http://www.playwitharena.de/
 
 ##LINK API
 
-- https://github.com/anzemur/chess-api
++ https://github.com/anzemur/chess-api
 
-- https://github.com/softwareconstruction240/softwareconstruction/blob/main/chess/3-web-api/web-api.md
++ https://github.com/softwareconstruction240/softwareconstruction/blob/main/chess/3-web-api/web-api.md
