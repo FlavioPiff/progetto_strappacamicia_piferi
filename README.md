@@ -97,3 +97,7 @@
 + https://github.com/anzemur/chess-api
 
 + https://github.com/softwareconstruction240/softwareconstruction/blob/main/chess/3-web-api/web-api.md
+
+## GIOCARE CON STOCKFISH ONLINE
+
++ https://listudy.org/en/play-stockfish
