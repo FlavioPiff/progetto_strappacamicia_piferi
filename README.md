@@ -2,25 +2,22 @@
 
 ## Funzionalità applicazione:
 
-+ Fornire un'applicazione che permetta ad un'utente di giocare a scacchi tramite un'interfaccia grafica (funzionalità fondamentale)
++ Fornire un'applicazione che permetta ad un'utente di giocare a stracciacamicia tramite un'interfaccia grafica (funzionalità fondamentale)
 + Tener traccia dei dati di gioco e mostrarli accedendovi
 
 ## Modalità di utilizzo:
 
 **1. Sfida con il computer**
 
-+ Sfido a scacchi il computer
++ Sfido a stracciacamicia il computer
 + Ho una cronologia con le mosse fatte da me e dal computer
-+ Ho la possibilità di scegliere la difficoltà dell'avversario
 
 **2. Accesso ai dati tramite account**
 
 + Posso accedere ad un menù che mi mostra i punteggi che ho ottenuto con il mio account:
 1. Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
 2. Partite giocate
-3. Vittorie/sconfitte per ogni livello di difficoltà
-4. Movimenti più frequenti per ogni pezzo per ogni difficoltà
-5. Durata media partita per ogni difficoltà
+3. Vittorie/sconfitte
 
 **3. Registrazione per giocare/accesso tramite nickname e password**
 
@@ -39,13 +36,11 @@
 
 ## Interfaccia:
 
-**1. Gioco a scacchi**
+**1. Gioco a strappacamicia**
 
-+ Scacchiera con i vari pezzi
-+ Cronologia delle mosse eseguite
-+ Pezzi "mangiati" da me e pezzi "mangiati" dall'avversario
++ Icona per indicare il mazzo in mano e sopra di esso il numero totale delle carte del mazzo
++ Cronologia delle prese
 + Cronometro della partita
-+ Livello di difficoltà scelto
 + Scritta nickname vs CPU
 
 **2. Accesso utente**
@@ -64,40 +59,18 @@
 5. Età
 6. Paese di nascita
 7. Nickname
-8.  Password
-9.   Ripetizione password
+8. Password
+9. Ripetizione password
 
 **4. Punteggi utente**
 
-+ Nickname
-+  Data creazione account
++   Nickname
++   Data creazione account
 +   Icona account
-+   Per ogni livello di difficoltà (4 livelli di difficoltà):
-1. Parite giocate
-2. Movimenti più frequenti per ogni pezzo
-3. Durata media partita
-4. % vittorie e sconfitte
-  
-## LINK MOTORE SCACCHISTICO:
++   Partite giocate
++   Durata media partita
++   % vittorie e sconfitte
+     
+## LINK REGOLE GIOCO:
 
-+ https://www.scacchi64.com/computer_stockfish.html
-
-+ https://github.com/official-stockfish/Stockfish
-
-## LINK GUI
-
-+ https://www.scacchi64.com/computer_arena.html
-
-+ https://github.com/maksimKorzh/uci-gui
-  
-+ http://www.playwitharena.de/
-
-## LINK API
-
-+ https://github.com/anzemur/chess-api
-
-+ https://github.com/softwareconstruction240/softwareconstruction/blob/main/chess/3-web-api/web-api.md
-
-## GIOCARE CON STOCKFISH ONLINE
-
-+ https://listudy.org/en/play-stockfish
++ https://www.cavallore.it/index.php/giochi/29-stracciacamicia-o-resta-in-camicia
