@@ -1,0 +1,1 @@
+const semi = ["Spade", "Denari", "Coppe", "Bastoni"]
