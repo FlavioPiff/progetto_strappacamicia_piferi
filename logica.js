@@ -9,3 +9,6 @@ for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso
        mazzo.push(carta);
     }
 }
+
+console.log(mazzo);
+console.log(mazzo.length);
