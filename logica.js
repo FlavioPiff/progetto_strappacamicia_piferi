@@ -6,5 +6,6 @@ const mazzo = [];
 for (let seme of semi) {
     for (let valore of valori){
        const carta = { seme: seme, valore: valore};
+       mazzo.push(carta);
     }
 }
