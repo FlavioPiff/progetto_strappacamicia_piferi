@@ -10,3 +10,8 @@ body {
     max-width: 1000px0;
     margin: 0 auto;
 }
+
+.cpu {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
