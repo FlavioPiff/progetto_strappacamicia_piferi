@@ -11,7 +11,15 @@ for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso
 }
 
 function mescolaMazzo(){
-    let mazzoMescolato = []
+    let mazzoMescolato = [];
+
+    while (mazzo.length > 0) {
+        let posizioneCasuale = Math.floor(Math.random() * mazzo.length);
+        let carta = mazzo[posizioneCasuale];
+        mazzo.splice(posizioneCasuale, 1);
+        mazzoMescolato.push(carta);
+    }
+    mazzo = mazzoMescolato;
 }
 
 console.log(mazzo);
