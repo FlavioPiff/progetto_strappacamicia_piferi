@@ -5,9 +5,13 @@ let mazzo = [];
 
 for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso Spade}, {2 Spade}, ecc.ecc.])
     for (let valore of valori){
-       const carta = { seme: seme, valore: valore};
-       mazzo.push(carta);
+        const carta = { seme: seme, valore: valore};
+        mazzo.push(carta);
     }
+}
+
+function mescolaMazzo(){
+    let mazzoMescolato = []
 }
 
 console.log(mazzo);
