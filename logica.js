@@ -10,7 +10,7 @@ for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso
     }
 }
 
-function mescolaMazzo(){
+function mescolaMazzo(){ //Mischio il mazzo: prendo il mazzo originario, utilizzo un mazzo di appoggio e poi "sovrascivo" il mazzo originario con quello mischiato
     let mazzoMescolato = [];
 
     while (mazzo.length > 0) {
