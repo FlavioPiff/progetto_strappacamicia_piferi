@@ -26,5 +26,5 @@ function mescolaMazzo(){ //Mischio il mazzo: prendo il mazzo originario, utilizz
 
 mescolaMazzo();
 
-console.log(mazzo);
-console.log(mazzo.length);
+carteGiocatore = mazzo.slice(0, 20);
+carteCPU = mazzo.slice(20, 40);
