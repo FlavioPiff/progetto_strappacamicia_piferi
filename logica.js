@@ -22,5 +22,7 @@ function mescolaMazzo(){
     mazzo = mazzoMescolato;
 }
 
+mescolaMazzo();
+
 console.log(mazzo);
 console.log(mazzo.length);
