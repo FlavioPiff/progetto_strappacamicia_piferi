@@ -28,3 +28,10 @@ mescolaMazzo();
 
 carteGiocatore = mazzo.slice(0, 20);
 carteCPU = mazzo.slice(20, 40);
+
+console.log("Mazzo:", mazzo)
+console.log("Carte giocatore:", carteGiocatore)
+console.log("Carte CPU:", carteCPU)
+
+console.log("Numero carte giocatore:", carteGiocatore.length)
+console.log("Numero carte CPU:", carteCPU.length)
