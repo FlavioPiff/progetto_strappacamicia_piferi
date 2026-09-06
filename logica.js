@@ -37,6 +37,11 @@ const pulsanteGiraCarta = document.getElementById("giraCarta");
 pulsanteGiraCarta.addEventListener("click", giraCarta);
 
 function giraCarta(){
+
+    if (turno !== "giocatore"){
+        return;
+    }
+    
     let carta = carteGiocatore.shift();
 
     carteSulTavolo.push(carta);
