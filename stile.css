@@ -30,12 +30,12 @@ body {
     display: block;
 }
 
-.valore {
+.valore {               /* da eliminare */
     font-size: 40px;
     font-weight: bold;
 }
 
-.seme {
+.seme {                 /* da eliminare */
     font-size: 35px;
     color: red;
 }
