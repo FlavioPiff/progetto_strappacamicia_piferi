@@ -41,7 +41,7 @@ function giraCarta(){
     if (turno !== "giocatore"){
         return;
     }
-    
+
     let carta = carteGiocatore.shift();
 
     carteSulTavolo.push(carta);
@@ -54,6 +54,8 @@ function giraCarta(){
     tavoloCarte.appendChild(nuovaCarta);
 
     contatoreGiocatore.textContent = carteGiocatore.length;
+
+    turno = "CPU";
 
     console.log(carta);
 }
