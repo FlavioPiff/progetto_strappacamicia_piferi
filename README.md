@@ -74,3 +74,8 @@
 ## LINK REGOLE GIOCO:
 
 + https://www.cavallore.it/index.php/giochi/29-stracciacamicia-o-resta-in-camicia
+
+## LINK SET IMMAGINI CARTE DA GIOCO NAPOLETANE:
+
++ https://commons.wikimedia.org/wiki/Category:Naples_deck?utm_source=chatgpt.com
+
