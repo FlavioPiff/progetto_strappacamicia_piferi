@@ -77,6 +77,6 @@
 
 ## LINK SET IMMAGINI CARTE DA GIOCO NAPOLETANE:
 
-+ https://commons.wikimedia.org/wiki/Category:Naples_deck?utm_source=chatgpt.com
++ https://commons.wikimedia.org/wiki/Category:Naples_deck?
 
 + (ATTENZIONE: Ho verificato che tutte le immagini delle carte che metto sono di pubblico dominio e non soggette a copyrigth)
