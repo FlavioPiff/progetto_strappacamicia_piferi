@@ -33,5 +33,7 @@ const pulsanteGiraCarta = document.getElementById("giraCarta");
 pulsanteGiraCarta.addEventListener("click", giraCarta);
 
 function giraCarta(){
-    console.log("Hai giirato una carta");
+    let carta = carteGiocatore.shift();
+
+    console.log(carta);
 }
