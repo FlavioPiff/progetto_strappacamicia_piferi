@@ -41,5 +41,7 @@ function giraCarta(){
     
     immagineCarta.src = "immagini/carte/" + nomeImmagine;
 
+    contatoreGiocatore.textContent = carteGiocatore.length;
+
     console.log(carta);
 }
