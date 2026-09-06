@@ -29,6 +29,8 @@ mescolaMazzo();
 carteGiocatore = mazzo.slice(0, 20); //Creo il mazzo del giocatore
 carteCPU = mazzo.slice(20, 40); //Creo il mazzo della CPU
 
+const immagineCarta = document.getElementById("immagineCarta");
+
 const pulsanteGiraCarta = document.getElementById("giraCarta");
 pulsanteGiraCarta.addEventListener("click", giraCarta);
 
