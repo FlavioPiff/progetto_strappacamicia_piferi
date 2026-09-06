@@ -40,17 +40,22 @@ body {
     color: red;
 }
 
-.giocatore{
+.giocatore {
     margin-bottom: 30px;
 }
 
-.azioni{
+.azioni {
     margin-top: 20px;
 }
 
-.azioni button{
+.azioni button {
     padding: 12px 25px;
     margin: 5px;
     font-size: 16px;
     cursor: pointer;
+}
+
+#tavoloCarte img {
+    width: 120px;
+    margin: 5px;
 }
