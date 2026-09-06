@@ -38,6 +38,9 @@ pulsanteGiraCarta.addEventListener("click", giraCarta);
 
 function giraCarta(){
     let carta = carteGiocatore.shift();
+
+    carteSulTavolo.push(carta);
+
     let nomeImmagine = carta.valore.toLowerCase() + "_" + carta.seme.toLowerCase() + ".jpg";
     
     immagineCarta.src = "immagini/carte/" + nomeImmagine;
