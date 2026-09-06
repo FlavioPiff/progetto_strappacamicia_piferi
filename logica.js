@@ -1,5 +1,5 @@
 const semi = ["Spade", "Denari", "Coppe", "Bastoni"];
-const valori = ["Asso", "2", "3", "4", "5", "6", "7", "Fante", "Cavallo", "Re"];
+const valori = ["Asso", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 let mazzo = [];
 let carteGiocatore = [];
