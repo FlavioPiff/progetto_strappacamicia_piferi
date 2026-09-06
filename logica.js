@@ -4,7 +4,8 @@ const valori = ["Asso", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 let mazzo = [];
 let carteGiocatore = [];
 let carteCPU = [];
-let carteSulTavolo = []
+let carteSulTavolo = [];
+let turno = "giocatore";
 
 for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso Spade}, {2 Spade}, ecc.ecc.])
     for (let valore of valori){
