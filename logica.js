@@ -31,3 +31,7 @@ carteCPU = mazzo.slice(20, 40); //Creo il mazzo della CPU
 
 const pulsanteGiraCarta = document.getElementById("giraCarta");
 pulsanteGiraCarta.addEventListener("click", giraCarta);
+
+function giraCarta(){
+    console.log("Hai giirato una carta");
+}
