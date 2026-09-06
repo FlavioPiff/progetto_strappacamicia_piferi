@@ -43,6 +43,11 @@ function giraCarta(){
 
     let nomeImmagine = carta.valore.toLowerCase() + "_" + carta.seme.toLowerCase() + ".jpg";
     
+    let nuovaCarta = document.createElement("img");
+    nuovaCarta.src = "immagini/carte/" + nomeImmagine;
+
+    tavoloCarte.appendChild(nuovaCarta);
+
     immagineCarta.src = "immagini/carte/" + nomeImmagine;
 
     contatoreGiocatore.textContent = carteGiocatore.length;
