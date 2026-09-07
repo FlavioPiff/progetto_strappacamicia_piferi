@@ -71,7 +71,9 @@ function giocaGiocatore(){
 
     giocaCPU();
 
-    console.log(verificaSeOnore(carta));
+    let onore = verificaSeOnore(carta);
+
+    console.log(onore);
 }
 
 
