@@ -92,5 +92,5 @@ function giocaCPU(){
 
     turno = "giocatore";
 
-    console.log(carta);
+    console.log(verificaSeOnore(carta));
 }
