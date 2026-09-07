@@ -94,6 +94,8 @@ function giocaGiocatore(){
 
     let risposte = numeroRisposte(carta);
 
+    risposteRimanenti = risposte;
+
     console.log(onore);
     console.log(risposte);
 }
