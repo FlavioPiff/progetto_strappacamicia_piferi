@@ -40,6 +40,24 @@ function verificaSeOnore(carta){
     return false;
 }
 
+function numeroRisposte(carta){
+
+    if (carta.valore === "Asso"){
+        return 1;
+    }
+
+    if (carta.valore === "2"){
+        return 2;
+    }
+
+    if (carta.valore === "3"){
+        return 3;
+    }
+
+    return 0;
+}
+
+
 const contatoreGiocatore = document.getElementById("carteGiocatore");
 const contatoreCPU = document.getElementById("carteCPU");
 const tavoloCarte = document.getElementById("tavoloCarte");
@@ -96,3 +114,8 @@ function giocaCPU(){
 
     console.log(verificaSeOnore(carta));
 }
+
+console.log(numeroRisposte({ seme: "Denari", valore: "Asso" }));
+console.log(numeroRisposte({ seme: "Spade", valore: "2" }));
+console.log(numeroRisposte({ seme: "Coppe", valore: "3" }));
+console.log(numeroRisposte({ seme: "Bastoni", valore: "7" }));
