@@ -122,4 +122,10 @@ function giocaCPU(){
 
     console.log(onoreCPU);
     console.log(risposteRimanenti);
+
+    if (risposteRimanenti > 0){
+        risposteRimanenti = risposteRimanenti -1;
+    }
+
+    console.log(risposteRimanenti);
 }
