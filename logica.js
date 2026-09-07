@@ -32,6 +32,7 @@ carteGiocatore = mazzo.slice(0, 20); //Creo il mazzo del giocatore
 carteCPU = mazzo.slice(20, 40); //Creo il mazzo della CPU
 
 const contatoreGiocatore = document.getElementById("carteGiocatore");
+const contatoreCPU = document.getElementById("carteCPU");
 const tavoloCarte = document.getElementById("tavoloCarte");
 const pulsanteGiocaGiocatore = document.getElementById("giocaGiocatore");
 
@@ -77,6 +78,8 @@ function giocaCPU(){
     nuovaCarta.src = "immagini/carte/" + nomeImmagine;
 
     tavoloCarte.appendChild(nuovaCarta);
+
+    contatoreCPU.textContent = carteCPU.length;
 
     turno = "giocatore";
 
