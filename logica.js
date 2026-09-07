@@ -59,6 +59,8 @@ function giocaGiocatore(){
 
     turno = "CPU";
 
+    giocaCPU();
+
     console.log(carta);
 }
 
