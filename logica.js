@@ -6,6 +6,7 @@ let carteGiocatore = [];
 let carteCPU = [];
 let carteSulTavolo = [];
 let turno = "giocatore";
+let risposteRimanenti = 0;
 
 for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso Spade}, {2 Spade}, ecc.ecc.])
     for (let valore of valori){
