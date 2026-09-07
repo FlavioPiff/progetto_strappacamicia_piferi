@@ -31,7 +31,7 @@ mescolaMazzo();
 carteGiocatore = mazzo.slice(0, 20); //Creo il mazzo del giocatore
 carteCPU = mazzo.slice(20, 40); //Creo il mazzo della CPU
 
-function verificaSeOnore(){
+function verificaSeOnore(carta){
 
     if (carta.valore === "Asso" || carta.valore === "2" || carta.valore === "3"){
         return true;
