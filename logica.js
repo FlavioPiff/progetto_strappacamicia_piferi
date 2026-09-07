@@ -90,13 +90,13 @@ function giocaGiocatore(){
 
     giocaCPU();
 
-    let onore = verificaSeOnore(carta);
+    let onoreGiocatore = verificaSeOnore(carta);
 
     let risposte = numeroRisposte(carta);
 
     risposteRimanenti = risposte;
 
-    console.log(onore);
+    console.log(onoreGiocatore);
     console.log(risposte);
 }
 
