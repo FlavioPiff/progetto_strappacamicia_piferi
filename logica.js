@@ -92,12 +92,12 @@ function giocaGiocatore(){
 
     let onoreGiocatore = verificaSeOnore(carta);
 
-    let risposte = numeroRisposte(carta);
+    let risposteGiocatore = numeroRisposte(carta);
 
-    risposteRimanenti = risposte;
+    risposteRimanenti = risposteGiocatore;
 
     console.log(onoreGiocatore);
-    console.log(risposte);
+    console.log(risposteGiocatore);
 }
 
 
