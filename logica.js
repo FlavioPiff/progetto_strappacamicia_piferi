@@ -36,6 +36,7 @@ const tavoloCarte = document.getElementById("tavoloCarte");
 const pulsanteGiraCarta = document.getElementById("giraCarta");
 pulsanteGiraCarta.addEventListener("click", giraCarta);
 
+
 function giraCarta(){
 
     if (turno !== "giocatore"){
@@ -56,6 +57,23 @@ function giraCarta(){
     contatoreGiocatore.textContent = carteGiocatore.length;
 
     turno = "CPU";
+
+    console.log(carta);
+}
+
+
+function giocaCPU(){
+
+    let carta = carteCPU.shift();
+
+    carteSulTavolo.push(carta);
+
+    let nomeImmagine = carta.valore.toLowerCase() + "_" + carta.seme.toLowerCase() + ".jpg";
+
+    let nuovaCarta = document.createElement("img");
+    nuovaCarta.src = "immagini/carte/" + nomeImmagine;
+
+    tavoloCarte.appendChild(nuovaCarta);
 
     console.log(carta);
 }
