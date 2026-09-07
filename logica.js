@@ -114,8 +114,3 @@ function giocaCPU(){
 
     console.log(verificaSeOnore(carta));
 }
-
-console.log(numeroRisposte({ seme: "Denari", valore: "Asso" }));
-console.log(numeroRisposte({ seme: "Spade", valore: "2" }));
-console.log(numeroRisposte({ seme: "Coppe", valore: "3" }));
-console.log(numeroRisposte({ seme: "Bastoni", valore: "7" }));
