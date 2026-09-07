@@ -120,5 +120,6 @@ function giocaCPU(){
 
     let onoreCPU = verificaSeOnore(carta);
 
-    console.log(verificaSeOnore(carta));
+    console.log(onoreCPU);
+    console.log(risposteRimanenti);
 }
