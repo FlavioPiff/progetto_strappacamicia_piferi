@@ -78,5 +78,7 @@ function giocaCPU(){
 
     tavoloCarte.appendChild(nuovaCarta);
 
+    turno = "giocatore";
+
     console.log(carta);
 }
