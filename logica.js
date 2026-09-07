@@ -120,6 +120,8 @@ function giocaCPU(){
 
     let onoreCPU = verificaSeOnore(carta);
 
+    let risposteCPU = numeroRisposte(carta)
+
     console.log(onoreCPU);
     console.log(risposteRimanenti);
 
