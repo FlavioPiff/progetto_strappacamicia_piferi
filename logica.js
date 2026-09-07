@@ -91,7 +91,10 @@ function giocaGiocatore(){
 
     let onore = verificaSeOnore(carta);
 
+    let risposte = numeroRisposte(carta);
+
     console.log(onore);
+    console.log(risposte);
 }
 
 
