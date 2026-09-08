@@ -104,6 +104,10 @@ function giocaGiocatore(){
         carteCPU = carteCPU.concat(carteSulTavolo);
         carteSulTavolo = [];
         ultimoOnore = "";
+
+        setTimeout(function(){
+
+        }, 1000);
     }
 
     if (onoreGiocatore === false && risposteRimanenti > 0){
