@@ -120,11 +120,15 @@ function giocaCPU(){
 
     let risposteCPU = numeroRisposte(carta)
 
+    if (onoreCPU === true){
+        risposteRimanenti = risposteCPU;
+    }
+
     console.log(onoreCPU);
     console.log("Rispposte prima:", risposteRimanenti);
 
-    if (risposteRimanenti > 0){
-        risposteRimanenti = risposteRimanenti -1;
+    if (onoreCPU === false && risposteRimanenti > 0){
+        risposteRimanenti = risposteRimanenti - 1;
     }
 
     console.log("Risposte dopo:", risposteRimanenti);
