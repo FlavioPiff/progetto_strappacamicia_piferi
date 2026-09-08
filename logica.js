@@ -100,6 +100,11 @@ function giocaGiocatore(){
         risposteRimanenti = risposteRimanenti - 1;
     }
 
+    if (risposteRimanenti === 0 && ultimoOnore === "CPU"){
+        carteCPU = carteCPU.concat(carteSulTavolo);
+        carteSulTavolo = [];
+    }
+
     if (onoreGiocatore === false && risposteRimanenti > 0){
         turno = "giocatore";
         return;
