@@ -86,15 +86,15 @@ function giocaGiocatore(){
 
     contatoreGiocatore.textContent = carteGiocatore.length;
 
-    turno = "CPU";
-
-    giocaCPU();
-
     let onoreGiocatore = verificaSeOnore(carta);
 
     let risposteGiocatore = numeroRisposte(carta);
 
     risposteRimanenti = risposteGiocatore;
+
+    turno = "CPU";
+
+    giocaCPU();
 
     console.log(onoreGiocatore);
     console.log(risposteGiocatore);
@@ -123,11 +123,11 @@ function giocaCPU(){
     let risposteCPU = numeroRisposte(carta)
 
     console.log(onoreCPU);
-    console.log(risposteRimanenti);
+    console.log("Rispposte prima:", risposteRimanenti);
 
     if (risposteRimanenti > 0){
         risposteRimanenti = risposteRimanenti -1;
     }
 
-    console.log(risposteRimanenti);
+    console.log("Risposte dopo:", risposteRimanenti);
 }
