@@ -122,6 +122,8 @@ function giocaCPU(){
 
     if (onoreCPU === true){
         risposteRimanenti = risposteCPU;
+        turno = "giocatore";
+        return;
     }
 
     console.log(onoreCPU);
