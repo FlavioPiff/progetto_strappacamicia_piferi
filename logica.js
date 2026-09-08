@@ -149,6 +149,11 @@ function giocaCPU(){
 
     console.log("Risposte dopo:", risposteRimanenti);
 
+    if (risposteRimanenti === 0 && ultimoOnore === "giocatore"){
+        carteGiocatore = carteGiocatore.concat(carteSulTavolo);
+        carteSulTavolo = [];
+    }
+
     if (risposteRimanenti > 0){
         giocaCPU();
         return;
