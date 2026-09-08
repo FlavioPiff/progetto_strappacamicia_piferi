@@ -98,6 +98,11 @@ function giocaGiocatore(){
         risposteRimanenti = risposteRimanenti - 1;
     }
 
+    if (onoreGiocatore === false && risposteRimanenti > 0){
+        turno = "giocatore";
+        return;
+    }
+
     turno = "CPU";
 
     giocaCPU();
