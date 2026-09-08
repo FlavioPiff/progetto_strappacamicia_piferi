@@ -116,8 +116,6 @@ function giocaCPU(){
 
     contatoreCPU.textContent = carteCPU.length;
 
-    turno = "giocatore";
-
     let onoreCPU = verificaSeOnore(carta);
 
     let risposteCPU = numeroRisposte(carta)
@@ -130,4 +128,11 @@ function giocaCPU(){
     }
 
     console.log("Risposte dopo:", risposteRimanenti);
+
+    if (risposteRimanenti > 0){
+        giocaCPU();
+        return;
+    }
+
+    turno ="giocatore";
 }
