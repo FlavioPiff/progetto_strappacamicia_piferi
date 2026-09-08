@@ -90,7 +90,13 @@ function giocaGiocatore(){
 
     let risposteGiocatore = numeroRisposte(carta);
 
-    risposteRimanenti = risposteGiocatore;
+    if (onoreGiocatore === true){
+        risposteRimanenti = risposteGiocatore;
+    }
+
+    if (onoreGiocatore === false && risposteRimanenti > 0){
+        risposteRimanenti = risposteRimanenti - 1;
+    }
 
     turno = "CPU";
 
