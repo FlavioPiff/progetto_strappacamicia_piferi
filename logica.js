@@ -93,6 +93,7 @@ function giocaGiocatore(){
 
     if (onoreGiocatore === true){
         risposteRimanenti = risposteGiocatore;
+        ultimoOnore = "giocatore";
     }
 
     if (onoreGiocatore === false && risposteRimanenti > 0){
@@ -134,6 +135,7 @@ function giocaCPU(){
 
     if (onoreCPU === true){
         risposteRimanenti = risposteCPU;
+        ultimoOnore = "CPU";
         turno = "giocatore";
         return;
     }
