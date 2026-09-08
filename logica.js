@@ -103,6 +103,7 @@ function giocaGiocatore(){
     if (risposteRimanenti === 0 && ultimoOnore === "CPU"){
         carteCPU = carteCPU.concat(carteSulTavolo);
         carteSulTavolo = [];
+        ultimoOnore = "";
     }
 
     if (onoreGiocatore === false && risposteRimanenti > 0){
@@ -157,6 +158,7 @@ function giocaCPU(){
     if (risposteRimanenti === 0 && ultimoOnore === "giocatore"){
         carteGiocatore = carteGiocatore.concat(carteSulTavolo);
         carteSulTavolo = [];
+        ultimoOnore = "";
     }
 
     if (risposteRimanenti > 0){
