@@ -70,7 +70,7 @@ pulsanteGiocaGiocatore.addEventListener("click", giocaGiocatore);
 
 function giocaGiocatore(){
 
-    if (turno !== "giocatore"){
+    if (turno !== "giocatore" || carteGiocatore.length === 0){ // Con questo if abbiamo che se NON è il turno del giocatore oppure il giocatore non ha più carte allora si ferma la funzione giocaGiocatore()
         return;
     }
 
