@@ -177,7 +177,11 @@ function giocaCPU(){
     }
 
     if (risposteRimanenti > 0){
-        giocaCPU();
+
+        setTimeout(function(){ //rallento la risposta della carta da parte della CPU quando il giocatore gioca un onore
+            giocaCPU();
+        }, 1500);
+
         return;
     }
 
