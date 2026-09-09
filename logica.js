@@ -94,7 +94,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
             alert("Hai vinto perchè la CPU ha finito le carte!");
         }, 1000);
 
-        return true //ritorna true se si è trovata la sconfitta della CPU
+        return true; //ritorna true se si è trovata la sconfitta della CPU
     }
 
     return false; //ritorna false se non si è trovata la sconfitta e quindi la partità può continuare
@@ -183,9 +183,6 @@ function giocaGiocatore(){
         giocaCPU();
     }, 1000);
 
-
-    console.log(onoreGiocatore);
-    console.log(risposteGiocatore);
 }
 
 
@@ -232,9 +229,6 @@ function giocaCPU(){
         return;
     }
 
-    console.log(onoreCPU);
-    console.log("Rispposte prima:", risposteRimanenti);
-
     if (onoreCPU === false && risposteRimanenti > 0){
         risposteRimanenti = risposteRimanenti - 1;
     }
@@ -243,7 +237,6 @@ function giocaCPU(){
         return;
     }
 
-    console.log("Risposte dopo:", risposteRimanenti);
 
     if (risposteRimanenti === 0 && ultimoOnore === "giocatore"){
         carteGiocatore = carteGiocatore.concat(carteSulTavolo);
