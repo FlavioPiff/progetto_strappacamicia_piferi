@@ -70,7 +70,16 @@ pulsanteGiocaGiocatore.addEventListener("click", giocaGiocatore);
 
 function giocaGiocatore(){
 
-    if (turno !== "giocatore" || carteGiocatore.length === 0){ // Con questo if abbiamo che se NON è il turno del giocatore oppure il giocatore non ha più carte allora si ferma la funzione giocaGiocatore()
+    if (turno !== "giocatore"){ //Con questo if abbiamo che se NON è il turno del giocatore allora si ferma la funzione giocaGiocatore()
+        return;
+    }
+
+    if (carteGiocatore.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto del giocatore è finito e deve ancora rispondere ad un'onore dell'avversario allora il giocatore ha automaticamente perso la partita
+        alert("Hai perso!");
+        return;
+    }
+
+    if (carteGiocatore.length === 0){ //Metto quest'altro controllo che mi servirà per gestire un'altra situazione, ovvero quella in cui il giocatore ha un'ultima carta per rispondere all'onore della CPU ma questa carta è un'ulteriore onore e dunque il giocatore non ha perso ma ha un'ultima chance di "soravvivenza"
         return;
     }
 
