@@ -138,6 +138,10 @@ function giocaGiocatore(){
 
 function giocaCPU(){
 
+    if (turno !== "CPU" || carteCPU.length === 0){
+        return;
+    }
+
     let carta = carteCPU.shift();
 
     carteSulTavolo.push(carta);
