@@ -74,7 +74,7 @@ function giocaGiocatore(){
         return;
     }
 
-    if (carteGiocatore.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto del giocatore è finito e deve ancora rispondere ad un'onore dell'avversario allora il giocatore ha automaticamente perso la partita
+    if (carteGiocatore.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore della CPU allora il giocatore ha automaticamente perso la partita
         alert("Hai perso!");
         return;
     }
@@ -147,7 +147,16 @@ function giocaGiocatore(){
 
 function giocaCPU(){
 
-    if (turno !== "CPU" || carteCPU.length === 0){
+    if (turno !== "CPU"){ //Con questo if abbiamo che se NON è il turno della CPU allora si ferma la funzione giocaCPU()
+        return;
+    }
+
+    if (carteCPU.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto della CPU è finito E deve ancora rispondere ad un'onore del giocatore allora la CPU ha automaticamente perso la partita
+        alert("Hai vinto!");
+        return;
+    }
+
+    if (carteCPU.length === 0){ //Metto quest'altro controllo che mi servirà per gestire un'altra situazione, ovvero quella in cui la CPU ha un'ultima carta per rispondere all'onore del giocatore ma questa carta è un'ulteriore onore e dunque la CPU non ha perso ma ha un'ultima chance di "soravvivenza"
         return;
     }
 
