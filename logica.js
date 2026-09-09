@@ -59,6 +59,16 @@ function numeroRisposte(carta){
     return 0;
 }
 
+function verificaSconfitta(){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita
+
+    if (carteGiocatore.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore della CPU allora il giocatore ha automaticamente perso la partita
+        alert("Hai perso!");
+        return true; //ritorna true se si è trovata una sconfitta
+    }
+
+    return false; //ritorna false se non si è trovata la sconfitta e quindi la partità può continuare
+}
+
 
 const contatoreGiocatore = document.getElementById("carteGiocatore");
 const contatoreCPU = document.getElementById("carteCPU");
@@ -74,8 +84,7 @@ function giocaGiocatore(){
         return;
     }
 
-    if (carteGiocatore.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore della CPU allora il giocatore ha automaticamente perso la partita
-        alert("Hai perso!");
+    if (verificaSconfitta() === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta())
         return;
     }
 
