@@ -59,7 +59,7 @@ function numeroRisposte(carta){
     return 0;
 }
 
-function verificaSconfitta(){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita
+function verificaSconfitta(onoreGiocato){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita, utilizzo onoreGiocato come parametro della funzione, ovvero una variabile disponibile dentro la funzione
 
     if (carteGiocatore.length === 0 && risposteRimanenti > 0 && ultimoOnore === "CPU"){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore E l'onore è della CPU allora il giocatore ha automaticamente perso la partita
         alert("Hai perso!");
@@ -68,6 +68,11 @@ function verificaSconfitta(){ //Funzione che utilizzo per fare tutte le verifich
     
     if (carteCPU.length === 0 && risposteRimanenti > 0 && ultimoOnore === "giocatore"){ //Con questo if abbiamo che se il mazzetto della CPU è finito E deve ancora rispondere ad un'onore E l'onore è del giocatore allora la CPU ha automaticamente perso la partita
         alert("Hai vinto!");
+        return true; //ritorna true se si è trovata la sconfitta della CPU
+    }
+
+    if (carteGiocatore.length === 0 && risposteRimanenti === 0 && onoreGiocato === false){ // Con questo if abbiamo che se il giocatore finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora il giocatore ha automaticamente perso la partita
+        alert("Hai perso perchè hai finito le carte!");
         return true; //ritorna true se si è trovata la sconfitta della CPU
     }
 
@@ -113,6 +118,10 @@ function giocaGiocatore(){
     let onoreGiocatore = verificaSeOnore(carta);
 
     let risposteGiocatore = numeroRisposte(carta);
+
+    if (verificaSconfitta(onoreGiocatore) === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta
+        return;
+    }
 
     if (onoreGiocatore === true){
         risposteRimanenti = risposteGiocatore;
