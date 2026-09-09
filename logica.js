@@ -224,6 +224,11 @@ function giocaCPU(){
         risposteRimanenti = risposteCPU;
         ultimoOnore = "CPU";
         turno = "giocatore";
+
+        if (verificaSconfitta() === true){
+            return;
+        }
+
         return;
     }
 
