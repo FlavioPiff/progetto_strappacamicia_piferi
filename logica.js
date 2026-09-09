@@ -132,10 +132,6 @@ function giocaGiocatore(){
 
     let risposteGiocatore = numeroRisposte(carta);
 
-    if (verificaSconfitta(onoreGiocatore, "giocatore") === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta del giocatore e l'informazione che è il giocatore a giocare la carta
-        return;
-    }
-
     if (onoreGiocatore === true){
         risposteRimanenti = risposteGiocatore;
         ultimoOnore = "giocatore";
@@ -143,6 +139,10 @@ function giocaGiocatore(){
 
     if (onoreGiocatore === false && risposteRimanenti > 0){
         risposteRimanenti = risposteRimanenti - 1;
+    }
+
+    if (verificaSconfitta(onoreGiocatore, "giocatore") === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta del giocatore e l'informazione che è il giocatore a giocare la carta
+        return;
     }
 
     if (risposteRimanenti === 0 && ultimoOnore === "CPU"){
