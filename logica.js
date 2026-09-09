@@ -108,7 +108,11 @@ function giocaGiocatore(){
         setTimeout(function(){ //Quando la CPU prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi la CPU rigioca una carta
             tavoloCarte.innerHTML = "";
             turno = "CPU";
-            giocaCPU();
+
+            setTimeout(function(){ //Dopo che la CPU ha preso le carte dal tavolo non gioca istantaneamente la carta ma aspetta un po', come se dall'altra parte dello schermo ci fosse un giocatore reale che non preme immediatamente il pulsante ma ha tempi di reazione più lenti e non istantanei
+                giocaCPU();
+            }, 1000);
+
         }, 1500);
 
         return; //Il return serve ad impedire che la CPU giochi subito anche tramite il codice che ho subito sotto
