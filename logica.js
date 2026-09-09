@@ -59,7 +59,7 @@ function numeroRisposte(carta){
     return 0;
 }
 
-function verificaSconfitta(onoreGiocato){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita, utilizzo onoreGiocato come parametro della funzione, ovvero una variabile disponibile dentro la funzione
+function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita, utilizzo onoreGiocato come parametro della funzione, ovvero una variabile disponibile dentro la funzione
 
     if (carteGiocatore.length === 0 && risposteRimanenti > 0 && ultimoOnore === "CPU"){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore E l'onore è della CPU allora il giocatore ha automaticamente perso la partita
         alert("Hai perso!");
@@ -71,7 +71,7 @@ function verificaSconfitta(onoreGiocato){ //Funzione che utilizzo per fare tutte
         return true; //ritorna true se si è trovata la sconfitta della CPU
     }
 
-    if (carteGiocatore.length === 0 && risposteRimanenti === 0 && onoreGiocato === false){ // Con questo if abbiamo che se il giocatore finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora il giocatore ha automaticamente perso la partita
+    if (carteGiocatore.length === 0 && risposteRimanenti === 0 && onoreGiocato === false && chiHaGiocato === "giocatore"){ // Con questo if abbiamo che se il giocatore finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora il giocatore ha automaticamente perso la partita
         
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             alert("Hai perso perchè hai finito le carte!");
@@ -80,7 +80,7 @@ function verificaSconfitta(onoreGiocato){ //Funzione che utilizzo per fare tutte
         return true; //ritorna true se si è trovata la sconfitta del giocatore
     }
 
-    if (carteCPU.length === 0 && risposteRimanenti === 0 && onoreGiocato === false){ // Con questo if abbiamo che se la CPU finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora la CPU ha automaticamente perso la partita
+    if (carteCPU.length === 0 && risposteRimanenti === 0 && onoreGiocato === false && chiHaGiocato === "CPU"){ // Con questo if abbiamo che se la CPU finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora la CPU ha automaticamente perso la partita
 
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dalla CPU. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             alert("Hai vinto perchè la CPU ha finito le carte!");
@@ -132,7 +132,7 @@ function giocaGiocatore(){
 
     let risposteGiocatore = numeroRisposte(carta);
 
-    if (verificaSconfitta(onoreGiocatore) === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta del giocatore
+    if (verificaSconfitta(onoreGiocatore, "giocatore") === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta del giocatore e l'informazione che è il giocatore a giocare la carta
         return;
     }
 
@@ -212,10 +212,6 @@ function giocaCPU(){
 
     let risposteCPU = numeroRisposte(carta)
 
-    if (verificaSconfitta(onoreCPU) === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta della CPU
-        return;
-    }
-
     if (onoreCPU === true){
         risposteRimanenti = risposteCPU;
         ultimoOnore = "CPU";
@@ -228,6 +224,10 @@ function giocaCPU(){
 
     if (onoreCPU === false && risposteRimanenti > 0){
         risposteRimanenti = risposteRimanenti - 1;
+    }
+
+    if (verificaSconfitta(onoreCPU, "CPU") === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta()) passandogli come parametro il verificaSeOnore della carta della CPU e l'informazione che è la CPU a giocare la carta
+        return;
     }
 
     console.log("Risposte dopo:", risposteRimanenti);
