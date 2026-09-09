@@ -61,9 +61,14 @@ function numeroRisposte(carta){
 
 function verificaSconfitta(){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita
 
-    if (carteGiocatore.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore della CPU allora il giocatore ha automaticamente perso la partita
+    if (carteGiocatore.length === 0 && risposteRimanenti > 0 && ultimoOnore === "CPU"){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore E l'onore è della CPU allora il giocatore ha automaticamente perso la partita
         alert("Hai perso!");
-        return true; //ritorna true se si è trovata una sconfitta
+        return true; //ritorna true se si è trovata la sconfitta del giocatore
+    }
+    
+    if (carteCPU.length === 0 && risposteRimanenti > 0 && ultimoOnore === "giocatore"){ //Con questo if abbiamo che se il mazzetto della CPU è finito E deve ancora rispondere ad un'onore E l'onore è del giocatore allora la CPU ha automaticamente perso la partita
+        alert("Hai vinto!");
+        return true; //ritorna true se si è trovata la sconfitta della CPU
     }
 
     return false; //ritorna false se non si è trovata la sconfitta e quindi la partità può continuare
@@ -160,8 +165,7 @@ function giocaCPU(){
         return;
     }
 
-    if (carteCPU.length === 0 && risposteRimanenti > 0){ //Con questo if abbiamo che se il mazzetto della CPU è finito E deve ancora rispondere ad un'onore del giocatore allora la CPU ha automaticamente perso la partita
-        alert("Hai vinto!");
+    if (verificaSconfitta() === true){ //if che richiama la funzione di verifica della sconfitta (verificaSconfitta())
         return;
     }
 
