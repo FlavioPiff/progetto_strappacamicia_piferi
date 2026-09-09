@@ -121,7 +121,10 @@ function giocaGiocatore(){
 
     turno = "CPU";
 
-    giocaCPU();
+    setTimeout(function(){ //rendo la CPU più lenta nel voltare la carta evitando che la giri immediatamente, rendendo più realistici i tempi, come se stessi giocando con una persona e non con un computer
+        giocaCPU();
+    }, 1500);
+
 
     console.log(onoreGiocatore);
     console.log(risposteGiocatore);
