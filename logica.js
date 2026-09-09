@@ -105,9 +105,13 @@ function giocaGiocatore(){
         carteSulTavolo = [];
         ultimoOnore = "";
 
-        setTimeout(function(){
+        setTimeout(function(){ //Quando la CPU prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi la CPU rigioca una carta
+            tavoloCarte.innerHTML = "";
+            turno = "CPU";
+            giocaCPU();
+        }, 1500);
 
-        }, 1000);
+        return;
     }
 
     if (onoreGiocatore === false && risposteRimanenti > 0){
