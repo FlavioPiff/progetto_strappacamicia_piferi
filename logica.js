@@ -111,7 +111,7 @@ function giocaGiocatore(){
             giocaCPU();
         }, 1500);
 
-        return;
+        return; //Il return serve ad impedire che la CPU giochi subito anche tramite il codice che ho subito sotto
     }
 
     if (onoreGiocatore === false && risposteRimanenti > 0){
@@ -167,6 +167,13 @@ function giocaCPU(){
         carteGiocatore = carteGiocatore.concat(carteSulTavolo);
         carteSulTavolo = [];
         ultimoOnore = "";
+
+        setTimeout(function(){ //Quando il giocatore prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi il giocatore rigioca una carta
+            tavoloCarte.innerHTML = "";
+            turno = "giocatore"; //La differenza rispetto alla CPU è che qui non chiamo subito una funzione per giocare una carta (giocaGiocatore()), perchè il giocatore deve premere il pulsante "Gira la carta"
+        }, 1500);
+
+        return; //Il return serve a fermare la funzione giocaCPU() dopo che il giocatore ha preso il mucchio di carte sul tavolo
     }
 
     if (risposteRimanenti > 0){
