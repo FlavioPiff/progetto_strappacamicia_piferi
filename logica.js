@@ -72,8 +72,12 @@ function verificaSconfitta(onoreGiocato){ //Funzione che utilizzo per fare tutte
     }
 
     if (carteGiocatore.length === 0 && risposteRimanenti === 0 && onoreGiocato === false){ // Con questo if abbiamo che se il giocatore finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora il giocatore ha automaticamente perso la partita
-        alert("Hai perso perchè hai finito le carte!");
-        return true; //ritorna true se si è trovata la sconfitta della CPU
+        
+        setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
+            alert("Hai perso perchè hai finito le carte!");
+        }, 1000);
+
+        return true; //ritorna true se si è trovata la sconfitta del giocatore
     }
 
     return false; //ritorna false se non si è trovata la sconfitta e quindi la partità può continuare
