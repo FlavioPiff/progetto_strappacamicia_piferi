@@ -103,6 +103,7 @@ function giocaGiocatore(){
     if (risposteRimanenti === 0 && ultimoOnore === "CPU"){
         carteCPU = carteCPU.concat(carteSulTavolo);
         carteSulTavolo = [];
+        contatoreCPU.textContent = carteCPU.length;
         ultimoOnore = "";
 
         setTimeout(function(){ //Quando la CPU prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi la CPU rigioca una carta
@@ -173,6 +174,7 @@ function giocaCPU(){
     if (risposteRimanenti === 0 && ultimoOnore === "giocatore"){
         carteGiocatore = carteGiocatore.concat(carteSulTavolo);
         carteSulTavolo = [];
+        contatoreGiocatore.textContent = carteGiocatore.length;
         ultimoOnore = "";
 
         setTimeout(function(){ //Quando il giocatore prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi il giocatore rigioca una carta
