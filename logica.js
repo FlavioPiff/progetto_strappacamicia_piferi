@@ -66,7 +66,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
         partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
 
-        setTimeout(function(){
+        setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             alert("Hai perso!");
         }, 1000);
 
@@ -77,7 +77,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
         
         partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
 
-        setTimeout(function(){
+        setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di vittoria della partita venga mostrata l'ultima carta giocata dalla CPU. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di vittoria.
             alert("Hai vinto!");
         }, 1000);
 
@@ -86,6 +86,8 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
     if (carteGiocatore.length === 0 && risposteRimanenti === 0 && onoreGiocato === false && chiHaGiocato === "giocatore"){ // Con questo if abbiamo che se il giocatore finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora il giocatore ha automaticamente perso la partita
         
+        partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
+
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             alert("Hai perso perchè hai finito le carte!");
         }, 1000);
@@ -95,7 +97,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
     if (carteCPU.length === 0 && risposteRimanenti === 0 && onoreGiocato === false && chiHaGiocato === "CPU"){ // Con questo if abbiamo che se la CPU finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora la CPU ha automaticamente perso la partita
 
-        setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dalla CPU. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
+        setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di vittoria della partita venga mostrata l'ultima carta giocata dalla CPU. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di vittoria.
             alert("Hai vinto perchè la CPU ha finito le carte!");
         }, 1000);
 
@@ -164,7 +166,7 @@ function giocaGiocatore(){
         contatoreCPU.textContent = carteCPU.length;
         ultimoOnore = "";
 
-        setTimeout(function(){ //Quando la CPU prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi la CPU rigioca una carta
+        setTimeout(function(){ //Quando la CPU prende la mano dal tavolo si aspetta 1 secondo mostrando la presa sul tavolo, viene pulito il tavolo e poi la CPU rigioca una carta
             tavoloCarte.innerHTML = "";
             turno = "CPU";
 
@@ -249,7 +251,7 @@ function giocaCPU(){
         contatoreGiocatore.textContent = carteGiocatore.length;
         ultimoOnore = "";
 
-        setTimeout(function(){ //Quando il giocatore prende la mano dal tavolo si aspetta 1.5 secondi mostrando la presa sul tavolo, viene pulito il tavolo e poi il giocatore rigioca una carta
+        setTimeout(function(){ //Quando il giocatore prende la mano dal tavolo si aspetta 1 secondo mostrando la presa sul tavolo, viene pulito il tavolo e poi il giocatore rigioca una carta
             tavoloCarte.innerHTML = "";
             turno = "giocatore"; //La differenza rispetto alla CPU è che qui non chiamo subito una funzione per giocare una carta (giocaGiocatore()), perchè il giocatore deve premere il pulsante "Gira la carta"
         }, 1000);
