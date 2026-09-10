@@ -107,7 +107,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
     if (carteCPU.length === 0 && risposteRimanenti === 0 && onoreGiocato === false && chiHaGiocato === "CPU"){ // Con questo if abbiamo che se la CPU finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora la CPU ha automaticamente perso la partita
 
-        partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
+        terminaPartita(); //In questo modo termino definitivamente la partita e blocco il pulsante del giocatore
 
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di vittoria della partita venga mostrata l'ultima carta giocata dalla CPU. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di vittoria.
             alert("Hai vinto perchè la CPU ha finito le carte!");
