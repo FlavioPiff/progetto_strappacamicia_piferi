@@ -60,6 +60,15 @@ function numeroRisposte(carta){
     return 0;
 }
 
+function terminaPartita(){
+
+    partitaFinita = true;
+    document.getElementById("giocaGiocatore").disabled = true;
+
+}
+
+
+
 function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita, utilizzo onoreGiocato come parametro della funzione, ovvero una variabile disponibile dentro la funzione
 
     if (carteGiocatore.length === 0 && risposteRimanenti > 0 && ultimoOnore === "CPU"){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore E l'onore è della CPU allora il giocatore ha automaticamente perso la partita
