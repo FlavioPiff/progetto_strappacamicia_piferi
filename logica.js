@@ -20,7 +20,7 @@ function aggiornaCronometro(){ //Cronometro del gioco
     let minuti = Math.floor(secondiTrascorsi / 60); // vado a calcolare i minuti interi trascorsi (Math.floor(1.25) ci dà 1 che sono i minuti)
     let secondi = secondiTrascorsi % 60 // vado a calcolare i secondi rimanenti, cioè quelli che devono comparire dopo i minuti (75 % 60 ci dà 15, il resto della divisione, che sono i secondi trascorsi dopo il primo minuto)
     
-    cronometro.textContent = secondiTrascorsi;
+    cronometro.textContent = minuti + ":" + secondi; // mostra il tempo trascorso (0:1, 0:2, ecc. ecc.)
 }
 
 intervalloCronometro = setInterval(aggiornaCronometro, 1000); //richiama la funzione aggiornaCronometro ogni secondo
