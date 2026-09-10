@@ -96,7 +96,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
     if (carteGiocatore.length === 0 && risposteRimanenti === 0 && onoreGiocato === false && chiHaGiocato === "giocatore"){ // Con questo if abbiamo che se il giocatore finisce tutte le carte del mazzo e l'ultima carta che gioca non è un Onore allora il giocatore ha automaticamente perso la partita
         
-        partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
+        terminaPartita(); //In questo modo termino definitivamente la partita e blocco il pulsante del giocatore
 
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             alert("Hai perso perchè hai finito le carte!");
