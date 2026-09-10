@@ -124,7 +124,7 @@ function giocaGiocatore(){
         return;
     }
 
-    if (partitaFinita === true){
+    if (partitaFinita === true){ //Con questo if, una volta terminata la partita, facciamo in modo che il giocatore premendo il pulsante per girare la carta non generi nessun effetto
         return;
     }
 
@@ -202,6 +202,10 @@ function giocaGiocatore(){
 function giocaCPU(){
 
     if (turno !== "CPU"){ //Con questo if abbiamo che se NON è il turno della CPU allora si ferma la funzione giocaCPU()
+        return;
+    }
+
+    if (partitaFinita === true){ //Con questo if, una volta terminata la partita, facciamo in modo che la CPU non generi nessun effetto
         return;
     }
 
