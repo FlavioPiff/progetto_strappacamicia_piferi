@@ -34,6 +34,7 @@ mescolaMazzo();
 carteGiocatore = mazzo.slice(0, 20); //Creo il mazzo del giocatore
 carteCPU = mazzo.slice(20, 40); //Creo il mazzo della CPU
 
+
 function verificaSeOnore(carta){
 
     if (carta.valore === "Asso" || carta.valore === "2" || carta.valore === "3"){
@@ -62,7 +63,7 @@ function numeroRisposte(carta){
 
 function terminaPartita(){
 
-    partitaFinita = true;
+    partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
     document.getElementById("giocaGiocatore").disabled = true;
 
 }
@@ -73,7 +74,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
     if (carteGiocatore.length === 0 && risposteRimanenti > 0 && ultimoOnore === "CPU"){ //Con questo if abbiamo che se il mazzetto del giocatore è finito E deve ancora rispondere ad un'onore E l'onore è della CPU allora il giocatore ha automaticamente perso la partita
 
-        partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
+        terminaPartita();
 
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             alert("Hai perso!");
