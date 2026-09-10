@@ -124,6 +124,7 @@ const contatoreGiocatore = document.getElementById("carteGiocatore");
 const contatoreCPU = document.getElementById("carteCPU");
 const tavoloCarte = document.getElementById("tavoloCarte");
 const pulsanteGiocaGiocatore = document.getElementById("giocaGiocatore");
+const cronometro = document.getElementById("cronometro");
 
 pulsanteGiocaGiocatore.addEventListener("click", giocaGiocatore);
 
