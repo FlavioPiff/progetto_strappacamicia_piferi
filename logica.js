@@ -11,6 +11,7 @@ let ultimoOnore = "";
 let partitaFinita = false;
 let secondiTrascorsi = 0;
 let intervalloCronometro;
+let cronometroAvviato = false;
 
 
 function aggiornaCronometro(){ //Cronometro del gioco
@@ -30,8 +31,6 @@ function aggiornaCronometro(){ //Cronometro del gioco
 
     cronometro.textContent = minuti + ":" + secondi; // mostra il tempo trascorso (0:1, 0:2, ecc. ecc.)
 }
-
-intervalloCronometro = setInterval(aggiornaCronometro, 1000); //richiama la funzione aggiornaCronometro ogni secondo
 
 
 for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso Spade}, {2 Spade}, ecc.ecc.])
@@ -86,6 +85,7 @@ function numeroRisposte(carta){
     return 0;
 }
 
+
 function terminaPartita(){
 
     partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
@@ -93,7 +93,6 @@ function terminaPartita(){
     document.getElementById("giocaGiocatore").disabled = true; //Blocco il pulsante "Gira carta" del giocatore
 
 }
-
 
 
 function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo per fare tutte le verifiche sulla fine della partita, utilizzo onoreGiocato come parametro della funzione, ovvero una variabile disponibile dentro la funzione
@@ -171,6 +170,12 @@ function giocaGiocatore(){
 
     if (carteGiocatore.length === 0){ //Controllo di sicurezza per evitare che il giocatore provi a giocare una carta se il suo mazzo è vuoto
         return;
+    }
+
+    if (cronometroAvviato === false){ //faccio partire il cronometro nel momento in cui il giocatore preme il pulsante per giocare la carta
+
+        intervalloCronometro = setInterval(aggiornaCronometro, 1000); //richiama la funzione aggiornaCronometro ogni secondo
+        cronometroAvviato = true;
     }
 
     let carta = carteGiocatore.shift();
