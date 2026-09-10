@@ -16,6 +16,7 @@ let intervalloCronometro;
 function aggiornaCronometro(){ //Cronometro del gioco
 
     secondiTrascorsi = secondiTrascorsi + 1 //Aggiunge un secondo ogni volta
+    let minuti = Math.floor(secondiTrascorsi / 60); // vado a calcolare i minuti interi trascorsi (Math.floor(1.25) ci dà 1 che sono i minuti)
     cronometro.textContent = secondiTrascorsi;
 }
 
