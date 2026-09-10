@@ -128,7 +128,7 @@ function giocaGiocatore(){
         return;
     }
 
-    if (carteGiocatore.length === 0){ //Metto quest'altro controllo che mi servirà per gestire un'altra situazione, ovvero quella in cui il giocatore ha un'ultima carta per rispondere all'onore della CPU ma questa carta è un'ulteriore onore e dunque il giocatore non ha perso ma ha un'ultima chance di "soravvivenza"
+    if (carteGiocatore.length === 0){ //Controllo di sicurezza per evitare che il giocatore provi a giocare una carta se il suo mazzo è vuoto
         return;
     }
 
@@ -205,7 +205,7 @@ function giocaCPU(){
         return;
     }
 
-    if (carteCPU.length === 0){ //Metto quest'altro controllo che mi servirà per gestire un'altra situazione, ovvero quella in cui la CPU ha un'ultima carta per rispondere all'onore del giocatore ma questa carta è un'ulteriore onore e dunque la CPU non ha perso ma ha un'ultima chance di "soravvivenza"
+    if (carteCPU.length === 0){ //Controllo di sicurezza per evitare che il giocatore provi a giocare una carta se il suo mazzo è vuoto
         return;
     }
 
