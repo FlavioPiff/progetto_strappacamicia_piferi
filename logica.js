@@ -75,6 +75,8 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
     
     if (carteCPU.length === 0 && risposteRimanenti > 0 && ultimoOnore === "giocatore"){ //Con questo if abbiamo che se il mazzetto della CPU è finito E deve ancora rispondere ad un'onore E l'onore è del giocatore allora la CPU ha automaticamente perso la partita
         
+        partitaFinita = true;
+
         setTimeout(function(){
             alert("Hai vinto!");
         }, 1000);
