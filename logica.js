@@ -124,6 +124,10 @@ function giocaGiocatore(){
         return;
     }
 
+    if (partitaFinita === true){
+        return;
+    }
+
     if (verificaSconfitta() === true){ // if che richiama la funzione di verifica della sconfitta (verificaSconfitta())
         return;
     }
