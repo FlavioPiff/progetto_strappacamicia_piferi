@@ -13,10 +13,13 @@ let secondiTrascorsi = 0;
 let intervalloCronometro;
 
 
-function aggiornaCronometro(){
+function aggiornaCronometro(){ //Cronometro del gioco
 
-    secondiTrascorsi = secondiTrascorsi + 1
+    secondiTrascorsi = secondiTrascorsi + 1 //Aggiunge un secondo ogni volta
+    cronometro.textContent = secondiTrascorsi;
 }
+
+intervalloCronometro = setInterval(aggiornaCronometro, 1000); //richiama la funzione aggiornaCronometro ogni secondo
 
 
 for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso Spade}, {2 Spade}, ecc.ecc.])
