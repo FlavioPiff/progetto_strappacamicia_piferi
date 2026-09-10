@@ -10,6 +10,14 @@ let risposteRimanenti = 0;
 let ultimoOnore = "";
 let partitaFinita = false;
 let secondiTrascorsi = 0;
+let intervalloCronometro;
+
+
+function aggiornaCronometro(){
+
+    secondiTrascorsi = secondiTrascorsi + 1
+}
+
 
 for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso Spade}, {2 Spade}, ecc.ecc.])
     for (let valore of valori){
@@ -17,6 +25,7 @@ for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso
         mazzo.push(carta);
     }
 }
+
 
 function mescolaMazzo(){ //Mischio il mazzo: prendo il mazzo originario, utilizzo un mazzo di appoggio e poi "sovrascivo" il mazzo originario con quello mischiato
     let mazzoMescolato = [];
