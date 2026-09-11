@@ -118,3 +118,12 @@ body {
     cursor: pointer;
     border: 8px;
 }
+
+.tempo {
+    position: absolute; /*posiziono il cronometro rispetto al tavolo, funziona rispetto alla .tavolo, quindi il cronometro non viene posizionato rispetto a tutta la pagina ma rispetto al pannello beige*/
+    top: 20px; /*distanza dal bordo superiore*/
+    right: 25px; /*distanza dal bordo di destra*/
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
