@@ -85,9 +85,9 @@ function numeroRisposte(carta){
     return 0;
 }
 
-function aggiornaMazzoGiocatore(){ //aggiorna il numero delle carte rimanenti nel mazzo del giocatore quando gioca una carta e fà sparire e riapparire il mazzetto delle carte del giocatore 
+function aggiornaMazzoGiocatore(){ //aggiorna il contatore delle carte del mazzetto del giocatore, fa sparire il mazzo se il numero di carte và a 0 mentre se il numero di carte del mazzetto del giocatore è > 0 lo fa riapparire
 
-    contatoreGiocatore.textContent = carteGiocatore.length;
+    contatoreGiocatore.textContent = carteGiocatore.length; //aggiorno il numero di carte del giocatore
 
     if (carteGiocatore.length === 0){ //se il numero di carte del giocatore finisce allora il mazzetto sparisce
         mazzoGiocatore.style.visibility = "hidden"; // con visibility sparisce l'immagine ma lo spazio rimane
@@ -98,6 +98,17 @@ function aggiornaMazzoGiocatore(){ //aggiorna il numero delle carte rimanenti ne
 
 }
 
+function aggiornaMazzoCPU(){ //aggiorna il contatore delle carte del mazzetto della CPU, fa sparire il mazzo se il numero di carte và a 0 mentre se il numero di carte del mazzetto della CPU è > 0 lo fa riapparire
+
+    contatoreCPU.textContent = carteCPU.length; //aggiorno il numero di carte della CPU
+
+    if (carteCPU.length === 0){ //se il numero di carte della CPU finisce allora il mazzetto sparisce
+        mazzoCPU.style.visibility = "hidden"; // con visibility sparisce l'immagine ma lo spazio rimane
+    }
+    else{
+        mazzoCPU.style.visibility = "visible"; //se il numero di carte della CPU è > 0 allora il mazzetto riappare
+    }
+}
 
 function terminaPartita(){
 
@@ -210,8 +221,7 @@ function giocaGiocatore(){
 
     tavoloCarte.appendChild(nuovaCarta);
 
-    aggiornaMazzoGiocatore(); //fa sparire il mazzo se il numero di carte và a 0 mentre se il numero di carte del mazzetto del giocatore è > 0 lo fa riapparire
-
+    aggiornaMazzoGiocatore(); //richiamo la funzione
     let onoreGiocatore = verificaSeOnore(carta);
 
     let risposteGiocatore = numeroRisposte(carta);
@@ -232,11 +242,11 @@ function giocaGiocatore(){
     if (risposteRimanenti === 0 && ultimoOnore === "CPU"){
         carteCPU = carteCPU.concat(carteSulTavolo);
         carteSulTavolo = [];
-        contatoreCPU.textContent = carteCPU.length;
         ultimoOnore = "";
 
         setTimeout(function(){ //Quando la CPU prende la mano dal tavolo si aspetta 1 secondo mostrando la presa sul tavolo, viene pulito il tavolo e poi la CPU rigioca una carta
             tavoloCarte.innerHTML = "";
+            aggiornaMazzoCPU(); //richiamo la funzione
             turno = "CPU";
 
             setTimeout(function(){ //Dopo che la CPU ha preso le carte dal tavolo non gioca istantaneamente la carta ma aspetta un po', come se dall'altra parte dello schermo ci fosse un giocatore reale che non preme immediatamente il pulsante ma ha tempi di reazione più lenti e non istantanei
@@ -291,7 +301,7 @@ function giocaCPU(){
 
     tavoloCarte.appendChild(nuovaCarta);
 
-    contatoreCPU.textContent = carteCPU.length;
+    aggiornaMazzoCPU(); //richiamo la funzione
 
     let onoreCPU = verificaSeOnore(carta);
 
@@ -325,7 +335,7 @@ function giocaCPU(){
 
         setTimeout(function(){ //Quando il giocatore prende la mano dal tavolo si aspetta 1 secondo mostrando la presa sul tavolo, viene pulito il tavolo e poi il giocatore rigioca una carta
             tavoloCarte.innerHTML = "";
-            aggiornaMazzoGiocatore(); //fa sparire il mazzo se il numero di carte và a 0 mentre se il numero di carte del mazzetto del giocatore è > 0 lo fa riapparire
+            aggiornaMazzoGiocatore(); //richiamo la funzione
             turno = "giocatore"; //La differenza rispetto alla CPU è che qui non chiamo subito una funzione per giocare una carta (giocaGiocatore()), perchè il giocatore deve premere il pulsante "Gira la carta"
         }, 1000);
 
