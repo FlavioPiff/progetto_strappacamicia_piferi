@@ -67,4 +67,10 @@ body {
     top: 50%; /*lo metto a metà altezza dello schermo*/
     left: 50%; /*lo metto a metà larghezza dello schermo*/
     transform: translate(-50%, -50%); /* corregge la posizione usando le dimensioni del riquadro stesso, così risulta esattamente centrato*/
+
+    background-color: white; /*creo il riquadro bianco*/
+    border: 2px solid black; /*lo rendo ben visibile*/
+    padding: 30px; /*lascio dello spazio attorno al testo*/
+    text-align: center; /*centro il messaggio*/
+    z-index: 1000; /*in questo modo faccio sì che compaia sopra gli altri elementi della pagina*/
 }
