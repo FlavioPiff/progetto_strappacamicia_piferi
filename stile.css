@@ -77,10 +77,12 @@ body {
     left: 50%; /*lo metto a metà larghezza dello schermo*/
     transform: translate(-50%, -50%); /* corregge la posizione usando le dimensioni del riquadro stesso, così risulta esattamente centrato*/
 
-    background-color: white; /*creo il riquadro bianco*/
+    background-color: #f5e6c8; /*creo il riquadro beige*/
     color: black;
 
-    border: 2px solid black; /*lo rendo ben visibile*/
+    border: 2px solid #6b4f2a; /*lo rendo ben visibile creando un bordo marrone*/
+    border-radius: 15px; /*arrotondo gli angoli*/
+
     padding: 30px; /*lascio dello spazio attorno al testo*/
     text-align: center; /*centro il messaggio*/
     z-index: 1000; /*in questo modo faccio sì che compaia sopra gli altri elementi della pagina*/
@@ -100,4 +102,11 @@ body {
     font-size: 18px; /*imposta la dimensione dle testo a 18px*/
     font-weight: bold; /*rende il testo in grassetto*/
     margin: 8px 0; /*crea sazio all'esterno dell'elemento. 8px sopra e sotto e 0px a destra e sinistra*/
+}
+
+#tornaGioco {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 8px;
 }
