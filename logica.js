@@ -151,6 +151,7 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
 const contatoreGiocatore = document.getElementById("carteGiocatore");
 const contatoreCPU = document.getElementById("carteCPU");
+const mazzoGiocatore = document.getElementById("mazzoGiocatore");
 const tavoloCarte = document.getElementById("tavoloCarte");
 const pulsanteGiocaGiocatore = document.getElementById("giocaGiocatore");
 const cronometro = document.getElementById("cronometro");
