@@ -61,5 +61,10 @@ body {
 }
 
 #risultatoPartita {
-    display: none;
+    display: none; /*continuo a tenerlo nascosto*/
+
+    position: fixed; /*posiziona il riquadro rispetto allo schermo*/
+    top: 50%; /*lo metto a metà altezza dello schermo*/
+    left: 50%; /*lo metto a metà larghezza dello schermo*/
+    transform: translate(-50%, -50%); /* corregge la posizione usando le dimensioni del riquadro stesso, così risulta esattamente centrato*/
 }
