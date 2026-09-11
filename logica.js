@@ -150,6 +150,8 @@ const contatoreCPU = document.getElementById("carteCPU");
 const tavoloCarte = document.getElementById("tavoloCarte");
 const pulsanteGiocaGiocatore = document.getElementById("giocaGiocatore");
 const cronometro = document.getElementById("cronometro");
+const risultatoPartita = document.getElementById("risultatoPartita");
+const testoRisultato = document.getElementById("testoRisultato");
 
 pulsanteGiocaGiocatore.addEventListener("click", giocaGiocatore);
 
