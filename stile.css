@@ -95,3 +95,9 @@ body {
     width: 120px; /*il dorso del mazzetto della CPU sarà largo 120px*/
     height: auto; /*in questo maniera si mantengono le proporzioni originali della carta*/
 }
+
+.numeroCarte {
+    font-size: 18px; /*imposta la dimensione dle testo a 18px*/
+    font-weight: bold; /*rende il testo in grassetto*/
+    margin: 8px 0; /*crea sazio all'esterno dell'elemento. 8px sopra e sotto e 0px a destra e sinistra*/
+}
