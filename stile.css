@@ -72,10 +72,17 @@ body {
 }
 
 .azioni button {
-    padding: 12px 25px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 10px 20px; /*creo spazio interno al pulsante*/
+    margin: 5px; /*lascio uno spazio di 5px attorno al pulsante*/
+
+    background-color: transparent; /*rendo il bottone trasparente, in questo modo lascio trasparire il colore del tavolo*/
+    color: #1b5e20; /*uso il verde dello sfondo per la scritta "Torna al menù"*/
+
+    border: 2px solid #1b5e20; /* creo un bordo dello stesso colore dello sfondo*/
+    border-radius: 8px; /*arrotondo gli angoli*/
+
+    font-size: 16px; /* metto la dimensione della scritta come 16px*/
+    cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
 
 #tavoloCarte img {
