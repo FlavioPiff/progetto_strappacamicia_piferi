@@ -78,6 +78,6 @@ body {
 }
 
 #mazzoGiocatore {
-    width: 120px; /*il dorso del mazzetto del giocatore sarà largo 80px*/
+    width: 120px; /*il dorso del mazzetto del giocatore sarà largo 120px*/
     height: auto; /*in questo maniera si mantengono le proporzioni originali della carta*/
 }
