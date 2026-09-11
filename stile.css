@@ -151,3 +151,18 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+#giocaGiocatore {
+    margin-top: 10px; /*lascio 10px di spazio tra il nome del giocatore ed il pulsante*/
+    padding: 10px 20px; /*per rendere il pulsante più grande creo spazio interno al pulsante*/
+
+    background-color: #1b5e20; /*rendo il colore del pulsante uguale allo sfondo*/
+    color: white; /*rendo la scritta del pulsante bianco*/
+
+    border: none; /*rimuovo il bordo predefinito del pulsante*/
+    border-radius: 8px; /*arrotondo gli angoli del pulsante*/
+
+    font-size: 16px; /*rendo la dimensione della scritta come 16px*/
+    font-weight: bold; /*metto in grassetto la scritta*/
+    cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
+}
