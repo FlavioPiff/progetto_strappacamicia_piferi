@@ -60,6 +60,15 @@ body {
     margin: 5px;
 }
 
+#tavoloCarte {
+    background-color: beige; /*creo il colore del rettangolo da gioco*/
+    width: 80%; /*gli dò una forma larga e rettangolare*/
+    min-height: 180px; /* in questa maniera il rettangolo da gioco è visibile anche quando non è stata ancora giocata nessuna carta*/
+    margin: 0 auto; /* centro il rettanfolo da gioco */
+    padding: 15px; /* in questa maniera evito che le carte siano attaccate ai bordi */
+    border-radius: 10px; /*arrotondo leggermente gli angoli del rettangolo da gioco*/
+}
+
 #risultatoPartita {
     display: none; /*continuo a tenerlo nascosto*/
 
