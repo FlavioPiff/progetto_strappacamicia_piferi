@@ -69,6 +69,8 @@ body {
     transform: translate(-50%, -50%); /* corregge la posizione usando le dimensioni del riquadro stesso, così risulta esattamente centrato*/
 
     background-color: white; /*creo il riquadro bianco*/
+    color: black;
+
     border: 2px solid black; /*lo rendo ben visibile*/
     padding: 30px; /*lascio dello spazio attorno al testo*/
     text-align: center; /*centro il messaggio*/
