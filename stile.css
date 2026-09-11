@@ -9,6 +9,14 @@ body {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
+
+    background-color: #e8d6b0; /*in questo modo creo il grande pannello beige centrale*/
+    color: black; /*rende nere le scritte dentro il pannello*/
+
+    border-radius: 25px; /*arrotonda gli angoli*/
+    padding: 25px; /*crea dello spazio interno*/
+
+    position: relative; /*lo userò per posizionare il cronometro in alto a destra*/
 }
 
 .cpu {
