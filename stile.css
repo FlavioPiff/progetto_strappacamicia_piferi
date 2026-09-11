@@ -76,3 +76,7 @@ body {
     text-align: center; /*centro il messaggio*/
     z-index: 1000; /*in questo modo faccio sì che compaia sopra gli altri elementi della pagina*/
 }
+
+#mazzoGiocatore {
+    width: 120px; /*il dorso del mazzetto del giocatore sarà largo 120px */
+}
