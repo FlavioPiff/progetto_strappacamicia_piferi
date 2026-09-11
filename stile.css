@@ -20,8 +20,15 @@ body {
 }
 
 .cpu {
-    margin-top: 30px;
-    margin-bottom: 50px;
+    display: flex; /*dispongo gli elementi della CPU in colonna, permette di gestire meglio la disposizione degli elementi*/
+    flex-direction: column; /*in questa maniera dispongo gli elementi in verticale uno sotto all'altro, seguendo l'ordine in cui sono scritti nel codice HTML*/
+    align-items: center; /*centro la scritta CPU, numero di carte della CPU e mazzetto della CPU*/
+    margin-top: 10px; /*aggiunge uno spazio vuoto di 10 px sopra il bordo superiore*/
+    margin-bottom: 25px; /*aggiunge uno spazio vuoto di 25 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
+}
+
+.cpu p { /*modifico lo spazio verticare attorno ai paragrafi che si trovano all'interno di un elemento con classe .cpu*/
+    margin: 5px 0; /*riduce lo spazio inutile tra CPU, numero di carte della CPU e il mazzetto della CPU*/
 }
 
 .carte {
