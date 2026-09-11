@@ -31,6 +31,18 @@ body {
     margin: 5px 0; /*riduce lo spazio inutile tra CPU, numero di carte della CPU e il mazzetto della CPU*/
 }
 
+.giocatore{
+    display: flex; /*dispongo gli elementi del giocatore in colonna, permette di gestire meglio la disposizione degli elementi*/
+    flex-direction: column; /*in questa maniera dispongo gli elementi in verticale uno sotto all'altro, seguendo l'ordine in cui sono scritti nel codice HTML*/
+    align-items: center; /*centro il mazzetto del giocatore, numero di carte del giocatore, nickname giocatore e pulsante "Gira la carta"*/
+    margin-top: 25px; /*aggiunge uno spazio vuoto di 25 px sopra il bordo superiore*/
+    margin-bottom: 20px; /*aggiunge uno spazio vuoto di 20 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
+}
+
+.giocatore p { /*modifico lo spazio verticare attorno ai paragrafi che si trovano all'interno di un elemento con classe .giocatore*/
+    margin: 5px 0; /*riduce lo spazio inutile tra il mazzetto del giocatore, il numero di carte del giocatore, il nickname del giocatore e del pulsante "Gira la carta"*/
+}
+
 .carte {
     margin-bottom: 50px;
 }
@@ -53,10 +65,6 @@ body {
 .seme {                 /* da eliminare */
     font-size: 35px;
     color: red;
-}
-
-.giocatore {
-    margin-bottom: 30px;
 }
 
 .azioni {
