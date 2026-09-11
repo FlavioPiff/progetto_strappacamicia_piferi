@@ -79,8 +79,10 @@ body {
 }
 
 #tavoloCarte img {
-    width: 120px;
-    margin: 5px;
+    width: 120px; /*la cartà sarà larga 120px*/
+    height: auto; /*in questa maniera mantengo le proporzioni originali della carta*/
+    margin: 5px; /*lascio un piccolo spazio tra le carte*/
+    border-radius: 8px; /*rendo gli angoli delle carte giocate arrotondate come i dorsi dei mazzetti*/
 }
 
 #tavoloCarte {
