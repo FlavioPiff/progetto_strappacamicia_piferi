@@ -44,7 +44,8 @@ body {
 }
 
 .carte {
-    margin-bottom: 50px;
+    margin-bottom: 25px; /* lascio spazio tra il mazzo della CPU e il tavolo di gioco*/
+    margin-bottom: 25px; /*lascio spazio tra il tavolo di gioco e il mazzo del giocatore*/
 }
 
 .carta {                /* da eliminare */
