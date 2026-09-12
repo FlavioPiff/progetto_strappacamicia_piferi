@@ -11,24 +11,14 @@ h1 {
     font-size: 32px; /* facci diventare il titolo ben visibile*/
 }
 
-.nomeCPU{
-    font-size: 20px; /*aumenta la dimensione della scritta CPU*/
-    font-weight: bold; /*rendo il testo CPU in grassetto*/
+.nomeCPU, .nomeGiocatore{
+    font-size: 20px; /*aumenta la dimensione del nome*/
+    font-weight: bold; /*rendo il nome in grassetto*/
 
     background-color: beige; /*sfondo dietro*/
     padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
     border-radius: 8px; /*arrotondo gli angoli*/
 }
-
-.nomeGiocatore{
-    font-size: 20px; /*aumenta la dimensione del nome del giocatore*/
-    font-weight: bold; /*rendo il nome del giocatore in grassetto*/
-
-    background-color: beige; /*sfondo dietro*/
-    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
-    border-radius: 8px; /*arrotondo gli angoli*/
-}
-
 
 .tavolo {
     width: 90%;
@@ -71,28 +61,8 @@ h1 {
 }
 
 .carte {
-    margin-bottom: 25px; /* lascio spazio tra il mazzo della CPU e il tavolo di gioco*/
+    margin-top: 25px; /* lascio spazio tra il mazzo della CPU e il tavolo di gioco*/
     margin-bottom: 25px; /*lascio spazio tra il tavolo di gioco e il mazzo del giocatore*/
-}
-
-.carta {                /* da eliminare */
-    width: 120px;
-    margin: 20px auto;
-}
-
-.carta img {
-    width: 100%;
-    display: block;
-}
-
-.valore {               /* da eliminare */
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.seme {                 /* da eliminare */
-    font-size: 35px;
-    color: red;
 }
 
 .azioni {
@@ -157,16 +127,10 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /*imposto una leggere ombra dietro al riquadro*/
 }
 
-#mazzoGiocatore {
-    width: 120px; /*il dorso del mazzetto del giocatore sarà largo 120px*/
+#mazzoGiocatore, #mazzoCPU {
+    width: 120px; /*il dorso del mazzetto sarà largo 120px*/
     height: auto; /*in questo maniera si mantengono le proporzioni originali della carta*/
-    border-radius: 8px; /*arrotondo gli angoli del mazzo del giocatore*/
-}
-
-#mazzoCPU {
-    width: 120px; /*il dorso del mazzetto della CPU sarà largo 120px*/
-    height: auto; /*in questo maniera si mantengono le proporzioni originali della carta*/
-    border-radius: 8px; /*arrotondo gli angoli del mazzo della CPU*/
+    border-radius: 8px; /*arrotondo gli angoli del mazzo*/
 }
 
 .numeroCarte {
@@ -222,7 +186,7 @@ h1 {
 }
 
 #testoRisultato {
-    font-family: 24px; /*metto più grande il messaggio di fine partita*/
+    font-size: 24px; /*metto più grande il messaggio di fine partita*/
     font-weight: bold; /*il messaggio in questo modo è più evidente*/
     margin-top: 0; /*riduco lo spazioo nella parte superiore del riquadro*/
     margin-bottom: 20px; /*metto dello spazio di 20px tra il messaggio e il pulsante*/
