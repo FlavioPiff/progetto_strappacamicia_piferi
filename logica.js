@@ -114,7 +114,7 @@ function terminaPartita(){
 
     partitaFinita = true; //in questo modo è più chiaro che la partita sia conclusa definitivamente
     clearInterval(intervalloCronometro); //ferma il setInterval che sta chiamando aggiornaCronometro() perchè la partita è finita
-    document.getElementById("giocaGiocatore").disabled = true; //Blocco il pulsante "Gira carta" del giocatore
+    pulsanteGiocaGiocatore.disabled = true; //Blocco il pulsante "Gira carta" del giocatore
 
 }
 
