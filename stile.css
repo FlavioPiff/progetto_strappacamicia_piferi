@@ -183,3 +183,10 @@ body {
     font-weight: bold; /*metto in grassetto la scritta*/
     cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
+
+#testoRisultato {
+    font-family: 24px; /*metto più grande il messaggio di fine partita*/
+    font-weight: bold; /*il messaggio in questo modo è più evidente*/
+    margin-top: 0; /*riduco lo spazioo nella parte superiore del riquadro*/
+    margin-bottom: 20px; /*metto dello spazio di 20px tra il messaggio e il pulsante*/
+}
