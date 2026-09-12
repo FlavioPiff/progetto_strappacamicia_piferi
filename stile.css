@@ -139,6 +139,8 @@ h1 {
 }
 
 #tornaGioco {
+    display: inline-block; /*permetto al link di comportarsi graficamente come un pulsante*/
+    text-decoration: none; /*tolgo la sottolineatura tipica dei link*/
     padding: 10px 20px; /*creo spazio interno al pulsante*/
 
     background-color: #1b5e20; /*metto lo sfondo verde*/
