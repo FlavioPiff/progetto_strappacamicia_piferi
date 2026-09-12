@@ -5,6 +5,12 @@ body {
     text-align: center;
 }
 
+h1 {
+    margin-top: 20px; /* lascio dello spazio sopra il titolo*/
+    margin-bottom: 20px; /* faccio dello spazio tra titolo e tavolo*/
+    font-size: 32px; /* facci diventare il titolo ben visibile*/
+}
+
 .tavolo {
     width: 90%;
     max-width: 1000px;
