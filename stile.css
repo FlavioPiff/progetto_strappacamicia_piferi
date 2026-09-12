@@ -14,11 +14,19 @@ h1 {
 .nomeCPU{
     font-size: 20px; /*aumenta la dimensione della scritta CPU*/
     font-weight: bold; /*rendo il testo CPU in grassetto*/
+
+    background-color: beige; /*sfondo dietro*/
+    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
+    border-radius: 8px; /*arrotondo gli angoli*/
 }
 
 .nomeGiocatore{
     font-size: 20px; /*aumenta la dimensione del nome del giocatore*/
     font-weight: bold; /*rendo il nome del giocatore in grassetto*/
+
+    background-color: beige; /*sfondo dietro*/
+    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
+    border-radius: 8px; /*arrotondo gli angoli*/
 }
 
 
