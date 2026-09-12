@@ -29,7 +29,7 @@ function aggiornaCronometro(){ //Cronometro del gioco
         secondi = "0" + secondi;
     }
 
-    cronometro.textContent = minuti + ":" + secondi; // mostra il tempo trascorso (0:1, 0:2, ecc. ecc.)
+    cronometro.textContent = minuti + ":" + secondi; // mostro il tempo trascorso nel formato minuti:secondi, ad esmepio 00:01 oppure 01:15
 }
 
 
@@ -41,7 +41,7 @@ for (let seme of semi) { //Creazione del mazzo napoletano, non mischiato ([{Asso
 }
 
 
-function mescolaMazzo(){ //Mischio il mazzo: prendo il mazzo originario, utilizzo un mazzo di appoggio e poi "sovrascivo" il mazzo originario con quello mischiato
+function mescolaMazzo(){ //Mischio il mazzo: prendo il mazzo originario, utilizzo un mazzo di appoggio e poi "sovrascrivo" il mazzo originario con quello mischiato
     let mazzoMescolato = [];
 
     while (mazzo.length > 0) {
@@ -222,6 +222,7 @@ function giocaGiocatore(){
     tavoloCarte.appendChild(nuovaCarta);
 
     aggiornaMazzoGiocatore(); //richiamo la funzione
+
     let onoreGiocatore = verificaSeOnore(carta);
 
     let risposteGiocatore = numeroRisposte(carta);
@@ -286,7 +287,7 @@ function giocaCPU(){
         return;
     }
 
-    if (carteCPU.length === 0){ //Controllo di sicurezza per evitare che il giocatore provi a giocare una carta se il suo mazzo è vuoto
+    if (carteCPU.length === 0){ //Controllo di sicurezza per evitare che la CPU provi a giocare una carta se il suo mazzo è vuoto
         return;
     }
 
@@ -305,7 +306,7 @@ function giocaCPU(){
 
     let onoreCPU = verificaSeOnore(carta);
 
-    let risposteCPU = numeroRisposte(carta)
+    let risposteCPU = numeroRisposte(carta);
 
     if (onoreCPU === true){
         risposteRimanenti = risposteCPU;
@@ -351,5 +352,5 @@ function giocaCPU(){
         return;
     }
 
-    turno ="giocatore";
+    turno = "giocatore";
 }
