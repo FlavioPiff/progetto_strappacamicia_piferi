@@ -144,10 +144,17 @@ body {
 }
 
 #tornaGioco {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 8px;
+    padding: 10px 20px; /*creo spazio interno al pulsante*/
+
+    background-color: #1b5e20; /*metto lo sfondo verde*/
+    color: white; /*rendo bianca la scritta*/
+
+    border: none; /*levo il bordo predefinito*/
+    border-radius: 8px; /*arrotondo gli angoli*/
+
+    font-size: 16px; /*imposto la dimensinoe della scritta con 16px*/
+    font-weight: bold; /*metto la scritta in grassetto*/
+    cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
 
 .tempo {
