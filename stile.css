@@ -121,8 +121,11 @@ body {
     border-radius: 15px; /*arrotondo gli angoli*/
 
     padding: 30px; /*lascio dello spazio attorno al testo*/
+    min-width: 320px; /*im posto una larghezza minima per rndere il riquadro più regolare*/
     text-align: center; /*centro il messaggio*/
     z-index: 1000; /*in questo modo faccio sì che compaia sopra gli altri elementi della pagina*/
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /*imposto una leggere ombra dietro al riquadro*/
 }
 
 #mazzoGiocatore {
