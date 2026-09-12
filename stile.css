@@ -69,7 +69,9 @@ h1 {
     margin-top: 20px;
 }
 
-.azioni button {
+.azioni a {
+    display: inline-block; /*permetto al link di comportarsi graficamente come un pulsante*/
+    text-decoration: none; /*tolgo la sottolineatura tipica dei link*/
     padding: 10px 20px; /*creo spazio interno al pulsante*/
     margin: 5px; /*lascio uno spazio di 5px attorno al pulsante*/
 
