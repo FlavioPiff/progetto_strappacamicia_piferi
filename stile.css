@@ -11,6 +11,17 @@ h1 {
     font-size: 32px; /* facci diventare il titolo ben visibile*/
 }
 
+.nomeCPU{
+    font-size: 20px; /*aumenta la dimensione della scritta CPU*/
+    font-weight: bold; /*rendo il testo CPU in grassetto*/
+}
+
+.nomeGiocatore{
+    font-size: 20px; /*aumenta la dimensione del nome del giocatore*/
+    font-weight: bold; /*rendo il nome del giocatore in grassetto*/
+}
+
+
 .tavolo {
     width: 90%;
     max-width: 1000px;
@@ -24,6 +35,7 @@ h1 {
     padding: 25px; /*crea dello spazio interno*/
 
     position: relative; /*lo userò per posizionare il cronometro in alto a destra*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /*imposto una leggere ombra attorno al tavolo*/
 }
 
 .cpu {
@@ -106,6 +118,7 @@ h1 {
     min-height: 180px; /* in questa maniera il rettangolo da gioco è visibile anche quando non è stata ancora giocata nessuna carta*/
     margin: 0 auto; /* centro il rettanfolo da gioco */
     padding: 15px; /* in questa maniera evito che le carte siano attaccate ai bordi */
+    border: 2px solid #c9b78f; /*creo un bordo leggero attorno al tavolo di gioco*/
     border-radius: 10px; /*arrotondo leggermente gli angoli del rettangolo da gioco*/
 
     display: flex; /*in questa maniera dispongo le carte una accanto all'altra*/
@@ -149,8 +162,7 @@ h1 {
 }
 
 .numeroCarte {
-    font-size: 18px; /*imposta la dimensione dle testo a 18px*/
-    font-weight: bold; /*rende il testo in grassetto*/
+    font-size: 17px; /*imposta la dimensione dle testo a 17px*/
     margin: 8px 0; /*crea sazio all'esterno dell'elemento. 8px sopra e sotto e 0px a destra e sinistra*/
 }
 
@@ -175,6 +187,10 @@ h1 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
+
+    background-color: beige; /*sfondo dietro al cronometro*/
+    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
+    border-radius: 8px; /*arrotondo gli angoli*/
 }
 
 #giocaGiocatore {
