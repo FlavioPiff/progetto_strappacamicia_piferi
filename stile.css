@@ -216,6 +216,11 @@ h1 {
     cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
 
+#giocaGiocatore:disabled{
+    opacity: 0.5; /* faccio diventare sbiadito il pulsante gioca una carta quando non può essere utilizzato*/
+    cursor: default; /*tolgo la manina quando il pulsante è disabilitato*/
+}
+
 #testoRisultato {
     font-family: 24px; /*metto più grande il messaggio di fine partita*/
     font-weight: bold; /*il messaggio in questo modo è più evidente*/
