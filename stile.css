@@ -44,8 +44,8 @@ h1 {
     margin-bottom: 25px; /*aggiunge uno spazio vuoto di 25 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
 }
 
-.cpu p { /*modifico lo spazio verticare attorno ai paragrafi che si trovano all'interno di un elemento con classe .cpu*/
-    margin: 5px 0; /*riduce lo spazio inutile tra CPU, numero di carte della CPU e il mazzetto della CPU*/
+.cpu p, .giocatore p { /*modifico lo spazio verticare attorno ai paragrafi*/
+    margin: 5px 0; /*imposto lo stesso margine ai testi della CPU e del giocatore*/
 }
 
 .giocatore{
@@ -56,9 +56,6 @@ h1 {
     margin-bottom: 20px; /*aggiunge uno spazio vuoto di 20 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
 }
 
-.giocatore p { /*modifico lo spazio verticare attorno ai paragrafi che si trovano all'interno di un elemento con classe .giocatore*/
-    margin: 5px 0; /*riduce lo spazio inutile tra il mazzetto del giocatore, il numero di carte del giocatore, il nickname del giocatore e del pulsante "Gira la carta"*/
-}
 
 .carte {
     margin-top: 25px; /* lascio spazio tra il mazzo della CPU e il tavolo di gioco*/
@@ -148,7 +145,6 @@ h1 {
     background-color: #1b5e20; /*metto lo sfondo verde*/
     color: white; /*rendo bianca la scritta*/
 
-    border: none; /*levo il bordo predefinito*/
     border-radius: 8px; /*arrotondo gli angoli*/
 
     font-size: 16px; /*imposto la dimensinoe della scritta con 16px*/
