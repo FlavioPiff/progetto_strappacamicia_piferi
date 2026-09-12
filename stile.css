@@ -1,3 +1,5 @@
+/* STILE GENERALE */
+
 body {
     background-color: #1b5e20;
     color: white;
@@ -11,14 +13,8 @@ h1 {
     font-size: 32px; /* facci diventare il titolo ben visibile*/
 }
 
-.nomeCPU, .nomeGiocatore{
-    font-size: 20px; /*aumenta la dimensione del nome*/
-    font-weight: bold; /*rendo il nome in grassetto*/
 
-    background-color: beige; /*sfondo dietro*/
-    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
-    border-radius: 8px; /*arrotondo gli angoli*/
-}
+/* TAVOLO DI GIOCO */
 
 .tavolo {
     width: 90%;
@@ -36,57 +32,9 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /*imposto una leggere ombra attorno al tavolo*/
 }
 
-.cpu {
-    display: flex; /*dispongo gli elementi della CPU in colonna, permette di gestire meglio la disposizione degli elementi*/
-    flex-direction: column; /*in questa maniera dispongo gli elementi in verticale uno sotto all'altro, seguendo l'ordine in cui sono scritti nel codice HTML*/
-    align-items: center; /*centro la scritta CPU, numero di carte della CPU e mazzetto della CPU*/
-    margin-top: 10px; /*aggiunge uno spazio vuoto di 10 px sopra il bordo superiore*/
-    margin-bottom: 25px; /*aggiunge uno spazio vuoto di 25 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
-}
-
-.cpu p, .giocatore p { /*modifico lo spazio verticare attorno ai paragrafi*/
-    margin: 5px 0; /*imposto lo stesso margine ai testi della CPU e del giocatore*/
-}
-
-.giocatore{
-    display: flex; /*dispongo gli elementi del giocatore in colonna, permette di gestire meglio la disposizione degli elementi*/
-    flex-direction: column; /*in questa maniera dispongo gli elementi in verticale uno sotto all'altro, seguendo l'ordine in cui sono scritti nel codice HTML*/
-    align-items: center; /*centro il mazzetto del giocatore, numero di carte del giocatore, nickname giocatore e pulsante "Gira la carta"*/
-    margin-top: 25px; /*aggiunge uno spazio vuoto di 25 px sopra il bordo superiore*/
-    margin-bottom: 20px; /*aggiunge uno spazio vuoto di 20 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
-}
-
-
 .carte {
     margin-top: 25px; /* lascio spazio tra il mazzo della CPU e il tavolo di gioco*/
     margin-bottom: 25px; /*lascio spazio tra il tavolo di gioco e il mazzo del giocatore*/
-}
-
-.azioni {
-    margin-top: 20px;
-}
-
-.azioni a {
-    display: inline-block; /*permetto al link di comportarsi graficamente come un pulsante*/
-    text-decoration: none; /*tolgo la sottolineatura tipica dei link*/
-    padding: 10px 20px; /*creo spazio interno al pulsante*/
-    margin: 5px; /*lascio uno spazio di 5px attorno al pulsante*/
-
-    background-color: transparent; /*rendo il bottone trasparente, in questo modo lascio trasparire il colore del tavolo*/
-    color: #1b5e20; /*uso il verde dello sfondo per la scritta "Torna al menù"*/
-
-    border: 2px solid #1b5e20; /* creo un bordo dello stesso colore dello sfondo*/
-    border-radius: 8px; /*arrotondo gli angoli*/
-
-    font-size: 16px; /* metto la dimensione della scritta come 16px*/
-    cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
-}
-
-#tavoloCarte img {
-    width: 120px; /*la cartà sarà larga 120px*/
-    height: auto; /*in questa maniera mantengo le proporzioni originali della carta*/
-    margin: 5px; /*lascio un piccolo spazio tra le carte*/
-    border-radius: 8px; /*rendo gli angoli delle carte giocate arrotondate come i dorsi dei mazzetti*/
 }
 
 #tavoloCarte {
@@ -103,6 +51,101 @@ h1 {
     align-items: center; /*centro le carte verticalmente*/
     flex-wrap: wrap; /*in questo modo se ci sono molte carte possono andare a capo*/
 }
+
+#tavoloCarte img {
+    width: 120px; /*la cartà sarà larga 120px*/
+    height: auto; /*in questa maniera mantengo le proporzioni originali della carta*/
+    margin: 5px; /*lascio un piccolo spazio tra le carte*/
+    border-radius: 8px; /*rendo gli angoli delle carte giocate arrotondate come i dorsi dei mazzetti*/
+}
+
+
+/* CPU */
+
+.cpu {
+    display: flex; /*dispongo gli elementi della CPU in colonna, permette di gestire meglio la disposizione degli elementi*/
+    flex-direction: column; /*in questa maniera dispongo gli elementi in verticale uno sotto all'altro, seguendo l'ordine in cui sono scritti nel codice HTML*/
+    align-items: center; /*centro la scritta CPU, numero di carte della CPU e mazzetto della CPU*/
+    margin-top: 10px; /*aggiunge uno spazio vuoto di 10 px sopra il bordo superiore*/
+    margin-bottom: 25px; /*aggiunge uno spazio vuoto di 25 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
+}
+
+
+/* GIOCATORE */
+
+.giocatore{
+    display: flex; /*dispongo gli elementi del giocatore in colonna, permette di gestire meglio la disposizione degli elementi*/
+    flex-direction: column; /*in questa maniera dispongo gli elementi in verticale uno sotto all'altro, seguendo l'ordine in cui sono scritti nel codice HTML*/
+    align-items: center; /*centro il mazzetto del giocatore, numero di carte del giocatore, nickname giocatore e pulsante "Gira la carta"*/
+    margin-top: 25px; /*aggiunge uno spazio vuoto di 25 px sopra il bordo superiore*/
+    margin-bottom: 20px; /*aggiunge uno spazio vuoto di 20 px sotto il bordo inferiore di un elemento, distanziandolo da quello che si trova subito sotto*/
+}
+
+#giocaGiocatore {
+    margin-top: 10px; /*lascio 10px di spazio tra il nome del giocatore ed il pulsante*/
+    padding: 10px 20px; /*per rendere il pulsante più grande creo spazio interno al pulsante*/
+
+    background-color: #1b5e20; /*rendo il colore del pulsante uguale allo sfondo*/
+    color: white; /*rendo la scritta del pulsante bianco*/
+
+    border: none; /*rimuovo il bordo predefinito del pulsante*/
+    border-radius: 8px; /*arrotondo gli angoli del pulsante*/
+
+    font-size: 16px; /*rendo la dimensione della scritta come 16px*/
+    font-weight: bold; /*metto in grassetto la scritta*/
+    cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
+}
+
+#giocaGiocatore:disabled{
+    opacity: 0.5; /* faccio diventare sbiadito il pulsante gioca una carta quando non può essere utilizzato*/
+    cursor: default; /*tolgo la manina quando il pulsante è disabilitato*/
+}
+
+
+/* ELEMENTI COMUNI CPU E GIOCATORE */
+
+.cpu p, .giocatore p { /*modifico lo spazio verticare attorno ai paragrafi*/
+    margin: 5px 0; /*imposto lo stesso margine ai testi della CPU e del giocatore*/
+}
+
+.nomeCPU, .nomeGiocatore{
+    font-size: 20px; /*aumenta la dimensione del nome*/
+    font-weight: bold; /*rendo il nome in grassetto*/
+
+    background-color: beige; /*sfondo dietro*/
+    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
+    border-radius: 8px; /*arrotondo gli angoli*/
+}
+
+#mazzoGiocatore, #mazzoCPU {
+    width: 120px; /*il dorso del mazzetto sarà largo 120px*/
+    height: auto; /*in questo maniera si mantengono le proporzioni originali della carta*/
+    border-radius: 8px; /*arrotondo gli angoli del mazzo*/
+}
+
+.numeroCarte {
+    font-size: 17px; /*imposta la dimensione dle testo a 17px*/
+    margin: 8px 0; /*crea sazio all'esterno dell'elemento. 8px sopra e sotto e 0px a destra e sinistra*/
+}
+
+
+/* CRONOMETRO */
+
+.tempo {
+    position: absolute; /*posiziono il cronometro rispetto al tavolo, funziona rispetto alla .tavolo, quindi il cronometro non viene posizionato rispetto a tutta la pagina ma rispetto al pannello beige*/
+    top: 20px; /*distanza dal bordo superiore*/
+    right: 25px; /*distanza dal bordo di destra*/
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+
+    background-color: beige; /*sfondo dietro al cronometro*/
+    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
+    border-radius: 8px; /*arrotondo gli angoli*/
+}
+
+
+/* FINE PARTITA */
 
 #risultatoPartita {
     display: none; /*continuo a tenerlo nascosto*/
@@ -126,15 +169,11 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /*imposto una leggere ombra dietro al riquadro*/
 }
 
-#mazzoGiocatore, #mazzoCPU {
-    width: 120px; /*il dorso del mazzetto sarà largo 120px*/
-    height: auto; /*in questo maniera si mantengono le proporzioni originali della carta*/
-    border-radius: 8px; /*arrotondo gli angoli del mazzo*/
-}
-
-.numeroCarte {
-    font-size: 17px; /*imposta la dimensione dle testo a 17px*/
-    margin: 8px 0; /*crea sazio all'esterno dell'elemento. 8px sopra e sotto e 0px a destra e sinistra*/
+#testoRisultato {
+    font-size: 24px; /*metto più grande il messaggio di fine partita*/
+    font-weight: bold; /*il messaggio in questo modo è più evidente*/
+    margin-top: 0; /*riduco lo spazioo nella parte superiore del riquadro*/
+    margin-bottom: 20px; /*metto dello spazio di 20px tra il messaggio e il pulsante*/
 }
 
 #tornaGioco {
@@ -152,42 +191,25 @@ h1 {
     cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
 
-.tempo {
-    position: absolute; /*posiziono il cronometro rispetto al tavolo, funziona rispetto alla .tavolo, quindi il cronometro non viene posizionato rispetto a tutta la pagina ma rispetto al pannello beige*/
-    top: 20px; /*distanza dal bordo superiore*/
-    right: 25px; /*distanza dal bordo di destra*/
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
 
-    background-color: beige; /*sfondo dietro al cronometro*/
-    padding: 8px 12px; /* lascio spazio tra il testo e i bordi*/
+/* AZIONI */
+
+.azioni {
+    margin-top: 20px;
+}
+
+.azioni a {
+    display: inline-block; /*permetto al link di comportarsi graficamente come un pulsante*/
+    text-decoration: none; /*tolgo la sottolineatura tipica dei link*/
+    padding: 10px 20px; /*creo spazio interno al pulsante*/
+    margin: 5px; /*lascio uno spazio di 5px attorno al pulsante*/
+
+    background-color: transparent; /*rendo il bottone trasparente, in questo modo lascio trasparire il colore del tavolo*/
+    color: #1b5e20; /*uso il verde dello sfondo per la scritta "Torna al menù"*/
+
+    border: 2px solid #1b5e20; /* creo un bordo dello stesso colore dello sfondo*/
     border-radius: 8px; /*arrotondo gli angoli*/
-}
 
-#giocaGiocatore {
-    margin-top: 10px; /*lascio 10px di spazio tra il nome del giocatore ed il pulsante*/
-    padding: 10px 20px; /*per rendere il pulsante più grande creo spazio interno al pulsante*/
-
-    background-color: #1b5e20; /*rendo il colore del pulsante uguale allo sfondo*/
-    color: white; /*rendo la scritta del pulsante bianco*/
-
-    border: none; /*rimuovo il bordo predefinito del pulsante*/
-    border-radius: 8px; /*arrotondo gli angoli del pulsante*/
-
-    font-size: 16px; /*rendo la dimensione della scritta come 16px*/
-    font-weight: bold; /*metto in grassetto la scritta*/
+    font-size: 16px; /* metto la dimensione della scritta come 16px*/
     cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
-}
-
-#giocaGiocatore:disabled{
-    opacity: 0.5; /* faccio diventare sbiadito il pulsante gioca una carta quando non può essere utilizzato*/
-    cursor: default; /*tolgo la manina quando il pulsante è disabilitato*/
-}
-
-#testoRisultato {
-    font-size: 24px; /*metto più grande il messaggio di fine partita*/
-    font-weight: bold; /*il messaggio in questo modo è più evidente*/
-    margin-top: 0; /*riduco lo spazioo nella parte superiore del riquadro*/
-    margin-bottom: 20px; /*metto dello spazio di 20px tra il messaggio e il pulsante*/
 }
