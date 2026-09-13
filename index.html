@@ -33,7 +33,8 @@
                     method: "POST", //invio una richiesta POST con dati JSON al file PHP che gestisce il login
                     headers: {
                         "Content-Type": "application/json" // In questa maniera dico a login.php che i dati che gli "invierò" sono in formato JSON
-                    }
+                    },
+                    body: JSON.stringify(datiLogin) //invio nickname e password al file PHP in formato JSON, datiLogin è un oggetto Javascript e JSON.stringify() lo trasforma in JSON
                 });
             });
         </script>
