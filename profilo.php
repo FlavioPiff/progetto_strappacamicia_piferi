@@ -21,7 +21,7 @@ $datiStatistiche = $risultato->fetch_assoc(); //recupero i dati con il numero di
 $partiteGiocatore = $datiStatistiche["partite_giocate"]; //salvo il numero di partite giocate dall'utente, con questa riga prendiamo solo quel valore e lo salviamo in $partiteGiocate
 
 $sqlVittorie = "SELECT COUNT(*) AS partite_vinte FROM partite WHERE id_utente = ? AND esito = 'vittoria'"; //preparo la query per contare le partite vinte dall'utente (il ? è un segnaposto, non inserirò direttamente l'id_utente nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
-
+$stmtVittorie = $connessione->prepare($sqlVittorie); //preparo la query delle vittorie prima di inserire l'id dell'utente
 ?>
 
 <!DOCTYPE html>
