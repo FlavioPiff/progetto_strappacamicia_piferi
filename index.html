@@ -41,7 +41,7 @@
                 })
                 .then(function(risultato){
                     if (risultato.successo === true){ //controllo se il login è riuscito
-                        console.log("Login riuscito"); //mostro nella console che il login è andato a buon fine (nickname e password sono corretti)
+                        window.location.href = "profilo.php"; //dopo il login corretto (nickname e password sono corretti) mando l'utente alla sua pagina profilo
                     }
                     else {
                         console.log("Login non riuscito"); //mostro nella console il login non è andato a buon fine (nickname o password non sono corretti)
