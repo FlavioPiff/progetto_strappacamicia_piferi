@@ -38,6 +38,11 @@
                 })
                 .then(function(risposta){
                     return risposta.json(); //converto la risposta ricevuta da PHP in dati Javascript
+                })
+                .then(function(risultato){
+                    if (risultato.successo === true){ //controllo se il login è riuscito
+
+                    }
                 });
             });
         </script>
