@@ -3,18 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Strappacamicia</title>
+        <title>Strappacamicia - Login</title>
     </head>
 
     <body>
-        <h1 style="text-align: center;">Gioco dello Strappacamicia</h1>
+        <h1 style="text-align: center;">Accedi a Strappacamicia</h1>
 
-        <p style="text-align: center;"> Premi il pulsante per giocare al gioco dello Strappacamicia</p>
+        <form id="formLogin">
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname">
 
-        <div style="text-align: center;">
-            <a href="gioco.html">
-                <button>Gioca!</button>
-            </a>
-        </div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <button type="submit">Accedi</button>
+        </form>
     </body>
 </html>
