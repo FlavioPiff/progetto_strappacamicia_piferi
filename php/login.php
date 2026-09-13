@@ -1,5 +1,7 @@
 <?php 
 
+session_start(); //avvio la sessione che userò per mantere l'utente autenticato
+
 header("Content-Type: application/json"); // gli dico che dovrà restituire JSON
 
 require_once "connessione.php";
