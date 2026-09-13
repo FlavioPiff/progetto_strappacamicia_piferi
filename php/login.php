@@ -29,4 +29,8 @@ if ($utente !== null){ //controllo se l'utente è stato trovato nel database, in
         echo json_encode($risposta); //invio la risposta in formato JSON in caso di Login andato male
     }
 }
+else{
+    $risposta = ["successo" => false]; //preparo la risposta nel caso in cui l'utente non esiste
+    echo json_encode($risposta); //invio la risposta in formato JSON nel caso in cui l'utente non esiste
+}
 ?>
