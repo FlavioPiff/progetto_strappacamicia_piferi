@@ -45,5 +45,6 @@ $partitePerse = $partiteGiocatore - $partiteVinte; // calcolo le partite perse s
         <h2>Le tue statistiche</h2> <!-- titolo della sezione che conterrà le statistiche delle partite-->
         <p>Partite giocate: <?php echo $partiteGiocatore; ?></p> <!-- mostro il numero totale di partite giocate dall'utente -->
         <p>Partite vinte: <?php echo $partiteVinte; ?></p> <!-- mostro il numero totale di partite vinte dall'utente -->
+        <p>Partite perse: <?php echo $partitePerse; ?></p> <!-- mostro il numero totale di partite perse dall'utente -->
     </body>
 </html>
