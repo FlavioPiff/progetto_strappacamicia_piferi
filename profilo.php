@@ -11,7 +11,9 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se nella sessione non 
 
 $idUtente = $_SESSION["id_utente"]; //recupero dalla sessione l'id dell'utente che ha effettuato il login (es. Flavio-> id_utente = 1)
 
-$sql = "SELECT COUNT(*) AS partite_giocate FROM partite WHERE id_utente = ?"; //preparo la query per contare le partite dell'utente (numero totale di partite giocate dall'utente)
+$sql = "SELECT COUNT(*) AS partite_giocate FROM partite WHERE id_utente = ?"; //preparo la query per contare le partite dell'utente (numero totale di partite giocate dall'utente), (il ? è un segnaposto, non inserirò direttamente l'id_utente nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
+$stmt = $connessione->prepare($sql); //preparo la query prima di inserire l'id dell'utente
+
 ?>
 
 <!DOCTYPE html>
