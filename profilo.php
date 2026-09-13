@@ -32,5 +32,6 @@ $partiteGiocatore = $datiStatistiche["partite_giocate"]; //salvo il numero di pa
     <body>
         <h1>Profilo di <?php echo $_SESSION["nickname"]; ?></h1> <!-- mostro il nickname dell'utente autenticato -->
         <h2>Le tue statistiche</h2> <!-- titolo della sezione che conterrà le statistiche delle partite-->
+        <p>Partite giocate: <?php echo $partiteGiocatore; ?></p> <!-- mostro il numero totale di partite giocate dall'utente -->
     </body>
 </html>
