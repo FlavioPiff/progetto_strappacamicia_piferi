@@ -28,6 +28,8 @@
                 const password = document.getElementById("password").value; //in questa maniera con getElementById("password") recupero il campo tramite il DOM e con .value prendo il testo della password che l'utente ha digitato
 
                 const datiLogin = {nickname: nickname, password: password}; //creo un oggetto Javascript datiLogin che userò per memorizzare i dati di nickname e password che poi invierò a PHP
+
+                fetch("php/login.php"); //invio una richiesta al file PHP che gestisce il login
             });
         </script>
     </body>
