@@ -27,6 +27,8 @@ $stmtVittorie->execute(); //eseguo la query per contare le partite vinte dall'ut
 $risultatoVittorie = $stmtVittorie->get_result(); //recupero il risultato della query con il numero di partite vinte, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultatoVittorie
 $datiVittorie = $risultatoVittorie->fetch_assoc(); //recupero i dati con il numero di partite vinte, in questo modo $risultatoVittorie contiene il risultato della query e poi con fetch_assoc() prendo la prima riga trovata e la trasformo in un array PHP
 
+$partiteVinte = $datiVittorie["partite_vinte"]; //salvo il numero di partite vinte dall'utente, con questa riga prendiamo solo quel valore e lo salviamo in $partiteVinte
+
 ?>
 
 <!DOCTYPE html>
