@@ -15,4 +15,5 @@ $stmt = $connessione->prepare($sql); //preparo la query prima di inserire il nic
 $stmt->bind_param("s", $nickname); // collego il nickname al punto interrogativo della query, la "s" indica che il parametro è una stringa, perchè il nickname è testo
 $stmt->execute(); //eseguo la query per cercare l'utente nel database, execute() esegue la ricerca
 $risultato = $stmt->get_result(); //recupero il risultato della ricerca nel database, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultato
+$utente = $risultato->fetch_assoc(); //recupero i dati dell'utente trovato, in questo modo $risultato contiene il risultato della query e poi con fetch_assoc() prendo la priam riga trovata e la trasformo in un array PHP
 ?>
