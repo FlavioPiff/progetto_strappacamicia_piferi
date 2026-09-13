@@ -53,5 +53,6 @@ if ($partiteGiocatore > 0) { //controllo che l'utente abbia giocato almeno una p
         <p>Partite giocate: <?php echo $partiteGiocatore; ?></p> <!-- mostro il numero totale di partite giocate dall'utente -->
         <p>Partite vinte: <?php echo $partiteVinte; ?></p> <!-- mostro il numero totale di partite vinte dall'utente -->
         <p>Partite perse: <?php echo $partitePerse; ?></p> <!-- mostro il numero totale di partite perse dall'utente -->
+        <p>Percentuale vittorie: <?php echo $percentualeVittorie; ?>%</p> <!-- mostro la percentuale di vittorie dell'utente -->
     </body>
 </html>
