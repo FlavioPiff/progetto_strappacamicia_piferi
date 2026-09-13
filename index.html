@@ -19,10 +19,10 @@
             <button type="submit">Accedi</button>
         </form>
         <script>
-            const formLogin = document.getElementById("formLogin");
+                const formLogin = document.getElementById("formLogin");
 
-            formLogin.addEventListener("submit", function(evento){ //Diciamo a Javascript di eseguire una funzione quando il form viene inviato
-                evento.preventDefault(); //questa riga blocca il comportamento normale del form, senza preventDefault() prendendo Accedi il browser ricaricherebbe normalmente la pagina
+                formLogin.addEventListener("submit", function(evento){ //Diciamo a Javascript di eseguire una funzione quando il form viene inviato
+                    evento.preventDefault(); //questa riga blocca il comportamento normale del form, senza preventDefault() prendendo Accedi il browser ricaricherebbe normalmente la pagina
 
                 const nickname = document.getElementById("nickname").value; //in questa maniera con getElementById("nickname") recupero il campo tramite il DOM e con .value prendo il testo che l'utente ha digitato
             });
