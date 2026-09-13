@@ -12,4 +12,5 @@ $password = $dati["password"]; //così prendiamo il valore associato alla chiave
 
 $sql = "SELECT * FROM utenti WHERE nickname = ?"; //preparo la query per cercare l'utente tramite il nickname (il ? è un segnaposto, non inserirò direttamente $nickname nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
 $stmt = $connessione->prepare($sql); //preparo la query prima di inserire il nickname
+$stmt->bind_param("s", $nickname); // collego il nickname al punto interrogativo della query, la "s" indica che il parametro è una stringa, perchè il nickname è testo
 ?>
