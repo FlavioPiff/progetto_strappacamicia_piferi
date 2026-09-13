@@ -30,6 +30,8 @@ $datiVittorie = $risultatoVittorie->fetch_assoc(); //recupero i dati con il nume
 $partiteVinte = $datiVittorie["partite_vinte"]; //salvo il numero di partite vinte dall'utente, con questa riga prendiamo solo quel valore e lo salviamo in $partiteVinte
 
 $partitePerse = $partiteGiocatore - $partiteVinte; // calcolo le partite perse sottraendo le vittorie dalle partite giocate
+
+$percentualeVittorie = 0; //imposto inizialmente la percentuale di vittorie a zero
 ?>
 
 <!DOCTYPE html>
