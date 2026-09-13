@@ -14,6 +14,8 @@ $idUtente = $_SESSION["id_utente"]; //recupero dalla sessione l'id dell'utente c
 $sql = "SELECT COUNT(*) AS partite_giocate FROM partite WHERE id_utente = ?"; //preparo la query per contare le partite dell'utente (numero totale di partite giocate dall'utente), (il ? è un segnaposto, non inserirò direttamente l'id_utente nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
 $stmt = $connessione->prepare($sql); //preparo la query prima di inserire l'id dell'utente
 $stmt->bind_param("i", $idUtente); //collego l'id dell'utente al punto interrogativo della query, la "i" indica che il parametro è un intero, perchè l'id_utente è un intero
+$stmt->execute(); //eseguo la query per contare le partite giocate dall'utente, execute() esegue la ricerca
+
 ?>
 
 <!DOCTYPE html>
