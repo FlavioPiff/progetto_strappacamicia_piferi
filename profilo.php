@@ -19,5 +19,6 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se nella sessione non 
 
     <body>
         <h1>Profilo di <?php echo $_SESSION["nickname"]; ?></h1> <!-- mostro il nickname dell'utente autenticato -->
+        <h2>Le tue statistiche</h2> <!-- titolo della sezione che conterrà le statistiche delle partite-->
     </body>
 </html>
