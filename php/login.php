@@ -11,4 +11,5 @@ $nickname = $dati["nickname"]; //così prendiamo il valore associato alla chiave
 $password = $dati["password"]; //così prendiamo il valore associato alla chiave "password" e lo salviamo nella variabile PGP $password
 
 $sql = "SELECT * FROM utenti WHERE nickname = ?"; //preparo la query per cercare l'utente tramite il nickname (il ? è un segnaposto, non inserirò direttamente $nickname nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
+$stmt = $connessione->prepare($sql); //preparo la query prima di inserire il nickname
 ?>
