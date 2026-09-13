@@ -32,6 +32,11 @@ $partiteVinte = $datiVittorie["partite_vinte"]; //salvo il numero di partite vin
 $partitePerse = $partiteGiocatore - $partiteVinte; // calcolo le partite perse sottraendo le vittorie dalle partite giocate
 
 $percentualeVittorie = 0; //imposto inizialmente la percentuale di vittorie a zero
+
+if ($partiteGiocatore > 0) { //controllo che l'utente abbia giocato almeno una partita prima di calcolare la percentuale delle vittorie, per evitare l'errore 0 / 0
+    $percentualeVittorie = ($partiteVinte / $partiteGiocatore) * 100; //calcolo la percentuale di vittorie del giocatore
+}
+
 ?>
 
 <!DOCTYPE html>
