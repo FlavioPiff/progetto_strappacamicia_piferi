@@ -24,6 +24,8 @@ if ($utente !== null){ //controllo se l'utente è stato trovato nel database, in
     if (password_verify($password, $utente["password_hash"])){ //controllo se la password inserita è corretta, password_verify() confronta in modo sicuro le due password, infatti non confronto la password in chiaro con il databse e non mando l'hash a Javascript
 
         $_SESSION["id_utente"] = $utente["id_utente"]; //salvo nella sessione l'id dell'utente che ha effettuato il login
+        $_SESSION["nickname"] = $utente["nickname"]; //salvo nella sessione anche il nickname dell'utente
+
 
         $risposta = ["successo" => true]; //preparo la risposta in caso di Login andato a buon fine
         echo json_encode($risposta); //invio la risposta in formato JSON in caso di Login andato a buon fine
