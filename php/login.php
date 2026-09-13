@@ -16,4 +16,8 @@ $stmt->bind_param("s", $nickname); // collego il nickname al punto interrogativo
 $stmt->execute(); //eseguo la query per cercare l'utente nel database, execute() esegue la ricerca
 $risultato = $stmt->get_result(); //recupero il risultato della ricerca nel database, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultato
 $utente = $risultato->fetch_assoc(); //recupero i dati dell'utente trovato, in questo modo $risultato contiene il risultato della query e poi con fetch_assoc() prendo la priam riga trovata e la trasformo in un array PHP
+
+if ($utente !== null){ //controllo se l'utente è stato trovato nel database, infatti fetch_assoc() restituisce i dati dell'utente se trova un riga, in caso contrario restituisce null
+
+}
 ?>
