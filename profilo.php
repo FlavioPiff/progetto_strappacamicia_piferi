@@ -9,6 +9,8 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se nella sessione non 
     exit; //serve a fermare subito PHP dopo il reindirizzamente
 }
 
+$idUtente = $_SESSION["id_utente"]; //recupero dalla sessione l'id dell'utente che ha effettuato il login (es. Flavio-> id_utente = 1)
+
 ?>
 
 <!DOCTYPE html>
