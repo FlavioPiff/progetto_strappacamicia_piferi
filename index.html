@@ -29,7 +29,12 @@
 
                 const datiLogin = {nickname: nickname, password: password}; //creo un oggetto Javascript datiLogin che userò per memorizzare i dati di nickname e password che poi invierò a PHP
 
-                fetch("php/login.php"); //invio una richiesta al file PHP che gestisce il login
+                fetch("php/login.php", {
+                    method: "POST", //invio una richiesta POST con dati JSON al file PHP che gestisce il login
+                    headers: {
+                        "Content-Type": "application/json" // In questa maniera dico a login.php che i dati che gli "invierò" sono in formato JSON
+                    }
+                });
             });
         </script>
     </body>
