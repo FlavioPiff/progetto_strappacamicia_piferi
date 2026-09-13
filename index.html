@@ -35,6 +35,9 @@
                         "Content-Type": "application/json" // In questa maniera dico a login.php che i dati che gli "invierò" sono in formato JSON
                     },
                     body: JSON.stringify(datiLogin) //invio nickname e password al file PHP in formato JSON, datiLogin è un oggetto Javascript e JSON.stringify() lo trasforma in JSON
+                })
+                .then(function(risposta){
+                    return risposta.json(); //converto la risposta ricevuta da PHP in dati Javascript
                 });
             });
         </script>
