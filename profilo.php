@@ -16,7 +16,9 @@ $stmt = $connessione->prepare($sql); //preparo la query prima di inserire l'id d
 $stmt->bind_param("i", $idUtente); //collego l'id dell'utente al punto interrogativo della query, la "i" indica che il parametro è un intero, perchè l'id_utente è un intero
 $stmt->execute(); //eseguo la query per contare le partite giocate dall'utente, execute() esegue la ricerca
 $risultato = $stmt->get_result(); //recupero il risultato della query con il numero di partite giocate, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultato
-$datiStatistiche = $risultato->fetch_assoc() //recupero i dati con il numero di partite giocate, in questo modo $risultato contiene il risultato della query e poi con fetch_assoc() prendo la priam riga trovata e la trasformo in un array PHP
+$datiStatistiche = $risultato->fetch_assoc(); //recupero i dati con il numero di partite giocate, in questo modo $risultato contiene il risultato della query e poi con fetch_assoc() prendo la priam riga trovata e la trasformo in un array PHP
+
+$partiteGiocatore = $datiStatistiche["partite_giocate"]; //salvo il numero di partite giocate dall'utente, con questa riga prendiamo solo quel valore e lo salviamo in $partiteGiocate
 ?>
 
 <!DOCTYPE html>
