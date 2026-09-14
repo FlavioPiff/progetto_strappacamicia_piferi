@@ -43,7 +43,9 @@ $stmtDurata->bind_param("i", $idUtente); //collego l'id utente al punto interrog
 $stmtDurata->execute(); //eseguo la query per calcolare la durata media delle partite dell'utente, execute() esegue la ricerca
 $risultatoDurata = $stmtDurata->get_result(); //recupero il risultato della query con la durata media delle partite, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultatoDurata
 $datiDurata = $risultatoDurata->fetch_assoc(); //recupero i dati con la durata media delle partite, in questo modo $risultatoDurata contiene il risultato della query e poi con fetch_assoc() prendo la prima riga trovata e la trasformo in un array PHP
-?>
+
+$durataMedia = $datiDurata["durata_media"]; //salvo la durata media delle partite dell'utente, con questa riga prendiamo solo quel valore e lo salviamo in $durataMedia
+?> 
 
 <!DOCTYPE html>
 <html lang="it">
