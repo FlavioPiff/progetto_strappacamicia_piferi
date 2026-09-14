@@ -44,7 +44,7 @@ $stmtDurata->execute(); //eseguo la query per calcolare la durata media delle pa
 $risultatoDurata = $stmtDurata->get_result(); //recupero il risultato della query con la durata media delle partite, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultatoDurata
 $datiDurata = $risultatoDurata->fetch_assoc(); //recupero i dati con la durata media delle partite, in questo modo $risultatoDurata contiene il risultato della query e poi con fetch_assoc() prendo la prima riga trovata e la trasformo in un array PHP
 
-$durataMedia = $datiDurata["durata_media"]; //salvo la durata media delle partite dell'utente, con questa riga prendiamo solo quel valore e lo salviamo in $durataMedia
+$durataMedia = round($datiDurata["durata_media"]); //salvo la durata media delle partite dell'utente, con questa riga prendiamo solo quel valore e lo salviamo in $durataMedia, arrotondo la durata media delle partite a un numero intero di secondi
 
 if ($durataMedia === null){ //controllo se l'utente non ha ancora una durata media
     $durataMedia = 0; //se nella tabella partite non ci sono partite dell'utente allora la query non restituisce 0 ma può restituire NULL, se ciò si verifica faccio in modo che venga mostrato 0 evitando un valore vuoto
