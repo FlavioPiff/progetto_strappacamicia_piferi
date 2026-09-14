@@ -45,6 +45,11 @@ $risultatoDurata = $stmtDurata->get_result(); //recupero il risultato della quer
 $datiDurata = $risultatoDurata->fetch_assoc(); //recupero i dati con la durata media delle partite, in questo modo $risultatoDurata contiene il risultato della query e poi con fetch_assoc() prendo la prima riga trovata e la trasformo in un array PHP
 
 $durataMedia = $datiDurata["durata_media"]; //salvo la durata media delle partite dell'utente, con questa riga prendiamo solo quel valore e lo salviamo in $durataMedia
+
+if ($durataMedia === null){ //controllo se l'utente non ha ancora una durata media
+    $durataMedia = 0; //se nella tabella partite non ci sono partite dell'utente allora la query non restituisce 0 ma può restituire NULL, se ciò si verifica faccio in modo che venga mostrato 0 evitando un valore vuoto
+}
+
 ?> 
 
 <!DOCTYPE html>
