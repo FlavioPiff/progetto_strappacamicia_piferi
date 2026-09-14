@@ -41,6 +41,8 @@ $sqlDurata = "SELECT AVG(durata) AS durata_media FROM partite WHERE id_utente = 
 $stmtDurata = $connessione->prepare($sqlDurata); //preparo la query della durata media prima di inserire l'id utente
 $stmtDurata->bind_param("i", $idUtente); //collego l'id utente al punto interrogativo della query della media, la "i" indica che il parametro è un intero, perchè l'id_utente è un intero
 $stmtDurata->execute(); //eseguo la query per calcolare la durata media delle partite dell'utente, execute() esegue la ricerca
+$risultatoDurata = $stmtDurata->get_result(); //recupero il risultato della query con la durata media delle partite, get_result() mi permette di prendere ciò che MySQL ha trovato e lo salvo in $risultatoDurata
+
 ?>
 
 <!DOCTYPE html>
