@@ -38,7 +38,7 @@ if ($partiteGiocatore > 0) { //controllo che l'utente abbia giocato almeno una p
 }
 
 $sqlDurata = "SELECT AVG(durata) AS durata_media FROM partite WHERE id_utente = ?"; //preparo la query per calcolare la durata media delle partite dell'utente (il ? è un segnaposto, non inserirò direttamente l'id_utente nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
-
+$stmtDurata = $connessione->prepare($sqlDurata); //preparo la query della durata media prima di inserire l'id utente
 ?>
 
 <!DOCTYPE html>
