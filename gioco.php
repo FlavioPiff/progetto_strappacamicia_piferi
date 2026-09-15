@@ -2,6 +2,11 @@
 
 session_start(); //avvio la sessione per poter controllare se l'utente ha effettuato il login
 
+if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha effetuato il login, $_SESSION["id_utente] viene creato solamente dopo un login corretto. Nel caso in cui non esista non permetto di entrare direttamente nel gioco e rimandiamo l'utente alla pagina di login.
+    header("Location: index.html");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
