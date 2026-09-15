@@ -14,4 +14,6 @@ $datiRicevuti = file_get_contents("php://input"); // recupero i dati della parti
 $dati = json_decode($datiRicevuti, true); //trasformo i dati ricevuti dal formato JSON in un array PHP. con json_decode() trasformo il testo JSON in un array PHP
 $esito = $dati["esito"]; //recupero dai dati ricevuti l'esito della partita
 $durata = $dati["durata"]; //recupero dai dati ricevuti la durata della partita
+
+$sql = "INSERT INTO partite (id_utente, data_partita, durata, esito) VALUES (?, NOW(), ?, ?)"; //preparo la query per salvare la partita nel database. I dati che inserirò saranno quelli richiesti dalla tabella (id_utente, preso dalla sessione; data_partita, con NOw() inserisco automaticamente data ed ora; durata ed esito, ricevuti dal Javascritp). Utilizzo anche in questo caso, come per il login, i ? che verranno collegati alle mie variabili tramite un prepared statement
 ?>
