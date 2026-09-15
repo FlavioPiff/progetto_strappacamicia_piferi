@@ -7,4 +7,6 @@ require_once "connessione.php"; //carico la connessione al database per poter sa
 if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha effetuato il login, salva_partita.php non deve accettare il salvataggio di una partita se non esiste un utente autenticato. In questa maniera se qualcuno prova ad aprire o richiamare direttamente il file senza aver fatto il login alla PHP si ferma con exit; 
     exit;
 }
+
+$idUtente = $_SESSION["id_utente"]; // recupero dala sessione l'id utente che ha giocato la partita. In questa maniera invece di ricevere l'id_utente dal Javascript prendo direttamente dalla sessione.
 ?>
