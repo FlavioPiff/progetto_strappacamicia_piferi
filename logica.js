@@ -372,3 +372,5 @@ function salvaPartita(esito, durata) { //funzione che useò per salvare nel data
         console.log(risultato); //questo secondo .then() mi permette di utilizzare l'oggetto del primo .then(). Per ora lo mostro solo tramite la console.
     });
 }
+
+salvaPartita("vittoria", 120); //chiamo temporaneamente la funzione con una partita di prova (in questa maniera simulo una partita terminata in vittoria della durata di 2 minuti)
