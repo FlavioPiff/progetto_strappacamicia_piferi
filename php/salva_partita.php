@@ -12,4 +12,5 @@ $idUtente = $_SESSION["id_utente"]; // recupero dala sessione l'id utente che ha
 
 $datiRicevuti = file_get_contents("php://input"); // recupero i dati della partita inviati dal Javascript in formaato JSON. Faccio questo perchè più vanti logica.js userà la fetch() per inciare a PHP le informazioni di esito e durata della partita. php://input permette a pHP di leggere il JSON ricevuto nella richiesta, analogamente a come ho fatto già nel login
 $dati = json_decode($datiRicevuti, true); //trasformo i dati ricevuti dal formato JSON in un array PHP. con json_decode() trasformo il testo JSON in un array PHP
+$esito = $dati["esito"]; //recupero dai dati ricevuti l'esito della partita
 ?>
