@@ -12786,7 +12786,11 @@ namespace Tqdev\PhpCrudApi {
         'authorization.columnHandler' => function ($operation, $tableName, $columnName){
             return !($tableName === 'utenti' && $columnName === 'password_hash'); //impedisco all'API di mostrare l'hash delle password degli utenti
         },
-    ]);
+
+        'authorization.tableHandler' => function ($operation, $tableName){
+            return $tableName !== 'utenti'; //impedisco all'API di accedere alla tabella degli utenti
+        },
+     ]);
     $request = RequestFactory::fromGlobals();
     $api = new Api($config);
     $response = $api->handle($request);
