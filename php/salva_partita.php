@@ -19,4 +19,6 @@ $sql = "INSERT INTO partite (id_utente, data_partita, durata, esito) VALUES (?, 
 $stmt = $connessione->prepare($sql); //preparo la query prima di inserire i dati della partita
 $stmt->bind_param("iis", $idUtente, $durata, $esito); // collego alla query l'id utente, la durata e l'esito della partita. la query contiene 3 ? e la stringa iis indica a PHP iil tipo dei 3 valori, i per l'id utente, i per la durata e s per l'esito
 $stmt->execute(); //eseguo la query per salvare la partita nel database, execute() esegue esegue effettivamente l'INSERT
+$risposta = ["successo" => true]; //preparo la risposta che conferma che la partita è stata salvata. quando Java chiamerà salva_partita.php dovrà sapere se PHP è arrivato correttamente fino al savataggio 
+
 ?>
