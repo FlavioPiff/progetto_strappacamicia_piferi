@@ -12782,6 +12782,7 @@ namespace Tqdev\PhpCrudApi {
         'username' => 'root', //imposto l'utente MySQL che utilizzo nel mio database
         'password' => 'root', //imposto la password MySQL che utilizzo per collegarmi al database
         'database' => 'strappacamicia', //imposto il database del progetto a cui php-crud-api deve collegarsi
+        'middlewares' => 'cors,authorization', //attivo il controllo delle autorizzazioni dell'API
     ]);
     $request = RequestFactory::fromGlobals();
     $api = new Api($config);
