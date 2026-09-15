@@ -69,5 +69,6 @@ if ($durataMedia === null){ //controllo se l'utente non ha ancora una durata med
         <p>Percentuale vittorie: <?php echo $percentualeVittorie; ?>%</p> <!-- mostro la percentuale di vittorie dell'utente -->
         <p>Durata media: <?php echo $durataMedia; ?> secondi</p> <!-- mostro la durata media delle partite dell'utente -->
         <a href="gioco.php">Gioca una partita</a> <!-- collegamento per entrare nella pagina di gioco -->
+        <a href="php/logout.php">Logout</a> <!-- collegamento per effettuare il logout dell'utente -->
     </body>
 </html>
