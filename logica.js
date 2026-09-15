@@ -365,7 +365,10 @@ function salvaPartita(esito, durata) { //funzione che useò per salvare nel data
         },
         body: JSON.stringify(datiPartita) //trasformo i dati della partita in JSON e li invio al file PHP salva_partita (datiPartita è un oggetto Javascript e JSON.stringify() lo trasforma nel JSON che salva_partita sà leggere)
     })
-    .then(function(risposta){ //ricevo la risposta restituita dal file PHP dopo il salvataggio
+    .then(function(risposta){ //ricevo la risposta restituita dal file PHP dopo il salvataggio (questo .then() trasforma il JSON ricevuto da PHP in un oggeto Javascript)
         return risposta.json(); //PHP restiuisce "successo": true ma la risposta fetch() deve essere trasformata in un oggetto Javascript tramite risposta.json()
+    })
+    .then(function(risultato){ //recupero il risultato del salvataggio restituito da PHP
+        console.log(risultato); //questo secondo .then() mi permette di utilizzare l'oggetto del primo .then(). Per ora lo mostro solo tramite la console.
     });
 }
