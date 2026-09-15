@@ -161,6 +161,8 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
 
         terminaPartita(); //In questo modo termino definitivamente la partita e blocco il pulsante del giocatore
 
+        salvaPartita("vittoria", secondiTrascorsi); //salvo nel database la vittoria del giocatore con la durata della partita
+
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di vittoria della partita venga mostrata l'ultima carta giocata dalla CPU. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di vittoria.
             testoRisultato.textContent = "Hai vinto perchè la CPU ha finito le carte!";
             risultatoPartita.style.display = "block";
