@@ -12797,7 +12797,7 @@ namespace Tqdev\PhpCrudApi {
             if ($tableName === 'partite' && isset($_SESSION['id_utente'])){
                 return 'filter=id_utente,eq,' . $_SESSION['id_utente']; //mostro solamente le partite dell'utente che ha effettuato il login 
             }
-            return '';
+            return 'filter=id_utente,eq,-1'; //se non c'è un utente loggato non permetto di visualizzare nessuna partita 
         },
      ]);
     $request = RequestFactory::fromGlobals();
