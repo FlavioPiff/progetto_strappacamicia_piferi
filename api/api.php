@@ -12790,8 +12790,16 @@ namespace Tqdev\PhpCrudApi {
             return !($tableName === 'utenti' && $columnName === 'password_hash'); //impedisco all'API di mostrare l'hash delle password degli utenti
         },
 
-        'authorization.tableHandler' => function ($operation, $tableName){
-            return $tableName !== 'utenti'; //impedisco all'API di accedere alla tabella degli utenti
+        'authorization.tableHandler' => function ($operation, $tableName) {
+            if ($tableName === 'utenti') {
+                return false; //impedisco all'API di accedere alla tabella degli utenti
+            }
+
+            if ($tableName === 'partite' && $operation !== 'list' && $operation !== 'read') {
+                return false; //permetto all'API solamente di leggere le partite
+            }
+
+            return true;
         },
         'authorization.recordHandler' => function ($operation, $tableName){
             if ($tableName === 'partite' && isset($_SESSION['id_utente'])){
