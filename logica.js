@@ -153,6 +153,8 @@ function verificaSconfitta(onoreGiocato, chiHaGiocato){ //Funzione che utilizzo 
         
         terminaPartita(); //In questo modo termino definitivamente la partita e blocco il pulsante del giocatore
 
+        salvaPartita("sconfitta", secondiTrascorsi); //salvo nel database la sconfitta quando il giocatore finisce le carte
+
         setTimeout(function(){ //aggiungo questo timeout per fare in modo che prima che venga visualizzato il messaggio di perdita della partita venga mostrata l'ultima carta giocata dal gioatore. Se non mettessi questo timeout la carta verrebbe visualizzata dopo il messaggio di sconfitta.
             testoRisultato.textContent = "Hai perso perchè hai finito le carte!";
             risultatoPartita.style.display = "block";
