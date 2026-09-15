@@ -12790,6 +12790,12 @@ namespace Tqdev\PhpCrudApi {
         'authorization.tableHandler' => function ($operation, $tableName){
             return $tableName !== 'utenti'; //impedisco all'API di accedere alla tabella degli utenti
         },
+        'authorization.recordHandler' => function ($operation, $tableName){
+            if ($tableName === 'partite' && isset($_SESSION['id_utente'])){
+                return 'filter=id_utente,eq,' . $_SESSION['id_utente']; //mostro solamente le partite dell'utente che ha effettuato il login 
+            }
+            return '';
+        },
      ]);
     $request = RequestFactory::fromGlobals();
     $api = new Api($config);
