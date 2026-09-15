@@ -34,7 +34,7 @@ $partitePerse = $partiteGiocatore - $partiteVinte; // calcolo le partite perse s
 $percentualeVittorie = 0; //imposto inizialmente la percentuale di vittorie a zero
 
 if ($partiteGiocatore > 0) { //controllo che l'utente abbia giocato almeno una partita prima di calcolare la percentuale delle vittorie, per evitare l'errore 0 / 0
-    $percentualeVittorie = ($partiteVinte / $partiteGiocatore) * 100; //calcolo la percentuale di vittorie del giocatore
+    $percentualeVittorie = round(($partiteVinte / $partiteGiocatore) * 100, 2); //calcolo la percentuale di vittorie del giocatore e la arrotondo a due cifre decimali (round(..,2) mantiene al massimo 2 cifre dopo la virgola)
 }
 
 $sqlDurata = "SELECT AVG(durata) AS durata_media FROM partite WHERE id_utente = ?"; //preparo la query per calcolare la durata media delle partite dell'utente (il ? è un segnaposto, non inserirò direttamente l'id_utente nella query, è più sicuro e mi permette di usare una prepared statement, evitando SQL injection)
