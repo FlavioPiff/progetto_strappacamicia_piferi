@@ -20,5 +20,5 @@ $stmt = $connessione->prepare($sql); //preparo la query prima di inserire i dati
 $stmt->bind_param("iis", $idUtente, $durata, $esito); // collego alla query l'id utente, la durata e l'esito della partita. la query contiene 3 ? e la stringa iis indica a PHP iil tipo dei 3 valori, i per l'id utente, i per la durata e s per l'esito
 $stmt->execute(); //eseguo la query per salvare la partita nel database, execute() esegue esegue effettivamente l'INSERT
 $risposta = ["successo" => true]; //preparo la risposta che conferma che la partita è stata salvata. quando Java chiamerà salva_partita.php dovrà sapere se PHP è arrivato correttamente fino al savataggio 
-
+echo json_encode($risposta); //restituisco al Javascript la risposta in formato JSON ($risposta è ancora un array PHP, con json_encode() diventa una risposta JSON)
 ?>
