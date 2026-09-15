@@ -21,6 +21,11 @@ if ($esito !== "vittoria" && $esito !== "sconfitta"){
     exit; //interrompo il salvataggio se l'esito ricevuto non è valido
 }
 
+if (is_int($durata) === false || $durata < 0){
+    echo json_encode(["successo" => false]);
+    exit; //interrompo il salvataggio se la durata della partita ricevuta non è un numero intero valido
+}
+
 
 $sql = "INSERT INTO partite (id_utente, data_partita, durata, esito) VALUES (?, NOW(), ?, ?)"; //preparo la query per salvare la partita nel database. I dati che inserirò saranno quelli richiesti dalla tabella (id_utente, preso dalla sessione; data_partita, con NOw() inserisco automaticamente data ed ora; durata ed esito, ricevuti dal Javascritp). Utilizzo anche in questo caso, come per il login, i ? che verranno collegati alle mie variabili tramite un prepared statement
 $stmt = $connessione->prepare($sql); //preparo la query prima di inserire i dati della partita
