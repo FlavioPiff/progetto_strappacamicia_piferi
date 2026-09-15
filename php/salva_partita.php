@@ -18,5 +18,5 @@ $durata = $dati["durata"]; //recupero dai dati ricevuti la durata della partita
 $sql = "INSERT INTO partite (id_utente, data_partita, durata, esito) VALUES (?, NOW(), ?, ?)"; //preparo la query per salvare la partita nel database. I dati che inserirò saranno quelli richiesti dalla tabella (id_utente, preso dalla sessione; data_partita, con NOw() inserisco automaticamente data ed ora; durata ed esito, ricevuti dal Javascritp). Utilizzo anche in questo caso, come per il login, i ? che verranno collegati alle mie variabili tramite un prepared statement
 $stmt = $connessione->prepare($sql); //preparo la query prima di inserire i dati della partita
 $stmt->bind_param("iis", $idUtente, $durata, $esito); // collego alla query l'id utente, la durata e l'esito della partita. la query contiene 3 ? e la stringa iis indica a PHP iil tipo dei 3 valori, i per l'id utente, i per la durata e s per l'esito
-
+$stmt->execute(); //eseguo la query per salvare la partita nel database, execute() esegue esegue effettivamente l'INSERT
 ?>
