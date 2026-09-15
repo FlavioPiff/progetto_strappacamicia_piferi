@@ -359,6 +359,9 @@ function salvaPartita(esito, durata) { //funzione che useò per salvare nel data
     const datiPartita = {esito: esito, durata: durata}; //creo un oggetto con l'esito e la durata della partita da inviare a PHP
 
     fetch("php/salva_partita.php", { //invio i dati della partita al file PHP che si occuperà di salvarli nel database. Con fetch() inizio la comunicazione AJAX tra Javascipt e PHP, POST sta ad indicare che voglio inviare dei dati 
-        method: "POST"
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json" //dico a PHP che i dati della partita saranno inviati in formato JSON
+        } 
     });
 }
