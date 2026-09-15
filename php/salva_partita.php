@@ -9,4 +9,6 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha eff
 }
 
 $idUtente = $_SESSION["id_utente"]; // recupero dala sessione l'id utente che ha giocato la partita. In questa maniera invece di ricevere l'id_utente dal Javascript prendo direttamente dalla sessione.
+
+$datiRicevuti = file_get_contents("php://input"); // recupero i dati della partita inviati dal Javascript in formaato JSON. Faccio questo perchè più vanti logica.js userà la fetch() per inciare a PHP le informazioni di esito e durata della partita. php://input permette a pHP di leggere il JSON ricevuto nella richiesta, analogamente a come ho fatto già nel login
 ?>
