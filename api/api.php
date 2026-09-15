@@ -12780,7 +12780,7 @@ namespace Tqdev\PhpCrudApi {
         // 'address' => 'localhost',
         // 'port' => '3306',
         'username' => 'root', //imposto l'utente MySQL che utilizzo nel mio database
-        'password' => 'php-crud-api',
+        'password' => 'root', //imposto la password MySQL che utilizzo per collegarmi al database
         'database' => 'php-crud-api',
     ]);
     $request = RequestFactory::fromGlobals();
