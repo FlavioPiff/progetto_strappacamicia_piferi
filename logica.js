@@ -362,6 +362,7 @@ function salvaPartita(esito, durata) { //funzione che useò per salvare nel data
         method: "POST",
         headers: {
             "Content-Type": "application/json" //dico a PHP che i dati della partita saranno inviati in formato JSON
-        } 
+        },
+        body: JSON.stringify(datiPartita) //trasformo i dati della partita in JSON e li invio al file PHP salva_partita (datiPartita è un oggetto Javascript e JSON.stringify() lo trasforma nel JSON che salva_partita sà leggere)
     });
 }
