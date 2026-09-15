@@ -1,3 +1,9 @@
+<?php
+
+session_start(); //avvio la sessione per poter controllare se l'utente ha effettuato il login
+
+?>
+
 <!DOCTYPE html>
 <html lang="it">
     <head>
