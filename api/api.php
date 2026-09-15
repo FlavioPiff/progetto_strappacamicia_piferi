@@ -12783,6 +12783,9 @@ namespace Tqdev\PhpCrudApi {
         'password' => 'root', //imposto la password MySQL che utilizzo per collegarmi al database
         'database' => 'strappacamicia', //imposto il database del progetto a cui php-crud-api deve collegarsi
         'middlewares' => 'cors,authorization', //attivo il controllo delle autorizzazioni dell'API
+        'authorization.columnHandler' => function ($operation, $tableName, $columnName){
+            return !($tableName === 'utenti' && $columnName === 'password_hash'); //impedisco all'API di mostrare l'hash delle password degli utenti
+        },
     ]);
     $request = RequestFactory::fromGlobals();
     $api = new Api($config);
