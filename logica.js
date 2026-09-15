@@ -356,5 +356,5 @@ function giocaCPU(){
 }
 
 function salvaPartita(esito, durata) { //funzione che useò per salvare nel database il risultato e la durata della partita
-
+    const datiPartita = {esito: esito, durata: durata}; //creo un oggetto con l'esito e la durata della partita da inviare a PHP
 }
