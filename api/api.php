@@ -12779,7 +12779,7 @@ namespace Tqdev\PhpCrudApi {
         // 'driver' => 'mysql',
         // 'address' => 'localhost',
         // 'port' => '3306',
-        'username' => 'php-crud-api',
+        'username' => 'root', //imposto l'utente MySQL che utilizzo nel mio database
         'password' => 'php-crud-api',
         'database' => 'php-crud-api',
     ]);
