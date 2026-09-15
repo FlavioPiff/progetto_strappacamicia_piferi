@@ -12775,6 +12775,9 @@ namespace Tqdev\PhpCrudApi {
     use Tqdev\PhpCrudApi\Config\Config;
     use Tqdev\PhpCrudApi\RequestFactory;
     use Tqdev\PhpCrudApi\ResponseUtils;
+
+    session_start(); //avvio la sessione per riconoscere l'utente che ha effettuato il login
+
     $config = new Config([
         // 'driver' => 'mysql',
         // 'address' => 'localhost',
