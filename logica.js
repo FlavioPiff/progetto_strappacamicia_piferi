@@ -354,3 +354,7 @@ function giocaCPU(){
 
     turno = "giocatore";
 }
+
+function salvaPartita(esito, durata) { //funzione che useò per salvare nel database il risultato e la durata della partita
+
+}
