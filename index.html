@@ -53,6 +53,9 @@
                     else {
                         document.getElementById("erroreLogin").textContent = "Nickname o password non corretti"; //mostro nella pagina un messaggio se il login non è andato a buon fine (nickname o password non sono corretti)
                     }
+                })
+                .catch(function(errore){
+                    document.getElementById("erroreLogin").textContent = "Errore durante il login"; //mostro un messaggio se si verifica un errore durante la comunicazione con PHP
                 });
             });
         </script>
