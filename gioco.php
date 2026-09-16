@@ -45,7 +45,7 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha eff
                 </div>
 
                 <div class="azioni">
-                        <a href="index.html">Torna al menù</a>
+                        <a href="php/logout.php">Fai il logout</a> <!-- permetto all'utente di uscire dal proprio account -->
                 </div>
         </div>
         <script src="logica.js"></script>
