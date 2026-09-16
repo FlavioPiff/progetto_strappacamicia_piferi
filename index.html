@@ -27,6 +27,12 @@
 
                 const nickname = document.getElementById("nickname").value; //in questa maniera con getElementById("nickname") recupero il campo tramite il DOM e con .value prendo il testo del nickname che l'utente ha digitato
                 const password = document.getElementById("password").value; //in questa maniera con getElementById("password") recupero il campo tramite il DOM e con .value prendo il testo della password che l'utente ha digitato
+                
+                if (nickname === "" || password === ""){
+                    document.getElementById("erroreLogin").textContent = "Inserisci nickname e password";
+                    return; //interrompo il login se uno dei due campi (nickname o password) è vuoto
+                }
+
 
                 const datiLogin = {nickname: nickname, password: password}; //creo un oggetto Javascript datiLogin che userò per memorizzare i dati di nickname e password che poi invierò a PHP
 
