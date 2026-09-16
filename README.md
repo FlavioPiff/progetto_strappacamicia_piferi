@@ -126,8 +126,8 @@ La prima pagina mostrata è la pagina di login (index.html).
 
 Per accedere è necessario utilizzare uno degli utenti già presenti nel database importato.
 
-+ nickname: Flavio
-+ password: prova123
++ nickname: Flavio e password: prova123
++ nickname: Marco e password: prova456
 
 Dopo aver effettuato correttamente il login viene mostrata la pagina del profilo (profilo.php), contenente le statistiche dell'utente.
 
