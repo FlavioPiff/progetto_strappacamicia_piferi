@@ -10,31 +10,25 @@ Applicazione web che permette ad un utente autenticato di giocare al gioco dello
 
 ## Modalità di utilizzo:
 
-**1. Sfida con il computer**
+**1. Accesso tramite account**
 
-+ Sfido a stracciacamicia il computer
-+ Ho una cronologia con le mosse fatte da me e dal computer
++ L'utente accede all'applicazione inserendo nickname e password
++ Le credenziali vengono verificate e, se corrette, l'utente viene indirizzato alla propria pagina del profilo 
 
-**2. Accesso ai dati tramite account**
+**2. Visualizzazione delle statistiche**
 
-+ Posso accedere ad un menù che mi mostra i punteggi che ho ottenuto con il mio account:
-1. Identificatore univoco, Nome, Cognome, Sesso, Età, Nickname
-2. Partite giocate
-3. Vittorie/sconfitte
++ Nel profilo vengono mostrate le statistiche delle partite giocate:
 
-**3. Registrazione per giocare/accesso tramite nickname e password**
+1. Partite giocate
+2. Partite vinte
+3. Partite perse
+4. Percentuale vittorie
+5. Durata media delle partite (espressa in secondi)
 
-+ Richiesta delle credenziali già create per giocare tramite nickname e password
-+ Se non ancora registarto, pagina con campi obbligatori da compilare per la registrazione e quindi per poter giocare:
-1. Icona account
-2. Nome
-3. Cognome
-4. Sesso
-5. Età
-6. Paese di nascita
-7. Nickname
-8. Password
-9. Ripetizione password
+**3. Partita contro il computer**
+
++ Dal profilo l'utente può iniziare una partita a Strappacamicia contro il computer 
++ Al termine della partita vengono salvati nel database l'esito e la durata della partita
 
 
 ## Interfaccia:
