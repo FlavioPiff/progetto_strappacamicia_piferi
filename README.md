@@ -1,4 +1,6 @@
-# Materiale Progetto
+# Progetto Strappacamicia
+
+Applicazione web che permette ad un utente autenticato di giocare al gioco dello Strappacamicia contro il computer e di visualizzare e le statistiche delle partite giocate.
 
 ## Funzionalità applicazione:
 
