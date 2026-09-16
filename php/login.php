@@ -4,6 +4,11 @@ session_start(); //avvio la sessione che userò per mantere l'utente autenticato
 
 header("Content-Type: application/json"); // gli dico che dovrà restituire JSON
 
+if ($_SERVER["REQUEST_METHOD"] !== "POST"){
+    echo json_encode(["successo" => false]); // faccio in modo di accettare solamente richieste POST per effettuare il login 
+    exit;
+}
+
 require_once "connessione.php";
 
 $datiRicevuti = file_get_contents("php://input"); // $datiRicevuti contiene il JSON dei dati ricevuti dal login
