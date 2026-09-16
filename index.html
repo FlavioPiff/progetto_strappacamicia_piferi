@@ -45,7 +45,7 @@
                         window.location.href = "profilo.php"; //dopo il login corretto (nickname e password sono corretti) mando l'utente alla sua pagina profilo
                     }
                     else {
-                        console.log("Login non riuscito"); //mostro nella console il login non è andato a buon fine (nickname o password non sono corretti)
+                        document.getElementById("erroreLogin").textContent = "Nickname o password non corretti"; //mostro nella pagina un messaggio se il login non è andato a buon fine (nickname o password non sono corretti)
                     }
                 });
             });
