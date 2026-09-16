@@ -40,7 +40,7 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha eff
                 <div class="giocatore">
                     <img id="mazzoGiocatore" src="immagini/carte/dorso.jpg" alt="Mazzo del giocatore">
                     <p class="numeroCarte"><span id="carteGiocatore">20</span> carte</p>
-                    <p class="nomeGiocatore" id="nomeGiocatore">Nome del giocatore </p>
+                    <p class="nomeGiocatore" id="nomeGiocatore"><?php echo $_SESSION["nickname"]; ?></p>
                     <button id="giocaGiocatore">Gira la carta</button>
                 </div>
 
