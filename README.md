@@ -126,8 +126,18 @@ La prima pagina mostrata è la pagina di login (index.html).
 
 Per accedere è necessario utilizzare uno degli utenti già presenti nel database importato.
 
-+ nickname: Flavio e password: prova123
-+ nickname: Marco e password: prova456
+Nel database sono già presenti due account che possono essere utilizzati per provare l'applicazione:
+
+**Account 1**
+- Nickname: 'Flavio'
+- Password: 'prova123'
+
+
+**Account 2**
+- Nickname: 'Marco'
+- Password: 'prova456'
+
+Le password vengono utilizzate per effettuare il login, mentre nel database sono memorizzati solamente i relativi hash.
 
 Dopo aver effettuato correttamente il login viene mostrata la pagina del profilo (profilo.php), contenente le statistiche dell'utente.
 
