@@ -55,3 +55,18 @@ Per realizzare il progetto ho utilizzato HTML, CSS, JavaScript, PHP e MySQL. Ho 
 - **MySQL**: utilizzato per memorizzare gli utenti e le partite.
 - **AJAX / Fetch API**: utilizzato per permettere a JavaScript di comunicare con PHP senza dover ricaricare la pagina.
 - **PHP-CRUD-API**: utilizzato per mettere a disposizione un'API REST collegata al database.
+
+
+## Punti critici
+
+Durante lo sviluppo del progetto alcuni aspetti hanno richiesto maggiore attenzione.
+
+- Un primo punto è stato gestire correttamente le regole di Strappacamicia, soprattutto nei casi in cui vengono giocate gli 'onori' e quando uno dei due giocatori termina le proprie carte.
+
+- Un altro punto importante è stato il collegamento tra JavaScript, PHP e database. Al termine della partita JavaScript deve comunicare l'esito e la durata a PHP, che deve poi associare questi dati all'utente autenticato e salvarli nel database.
+
+- Anche la gestione dell'autenticazione ha richiesto molto tempo ed attenzione. Le pagine del profilo e del gioco devono essere accessibili solamente dopo aver effettuato il login e le password non devono essere salvate direttamente nel database.
+
+- Un altro aspetto importante è stata la gestione dell'accesso ai dati tramite API. È stato necessario limitare l'accesso alla tabella degli utenti e fare in modo che ogni utente possa leggere solamente le proprie partite.
+
+- Infine, un possibile limite dell'applicazione attuale è che gli account devono essere già presenti nel database, perché non è stata implementata una pagina di registrazione.
