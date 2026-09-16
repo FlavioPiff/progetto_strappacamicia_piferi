@@ -15,7 +15,7 @@ $datiRicevuti = file_get_contents("php://input"); // recupero i dati della parti
 $dati = json_decode($datiRicevuti, true); //trasformo i dati ricevuti dal formato JSON in un array PHP. con json_decode() trasformo il testo JSON in un array PHP
 
 if ($dati === null){
-    echo json_encode(["successo" => false]):
+    echo json_encode(["successo" => false]);
     exit; //interrompo il salvataggio se i dati ricevuti non sono in formato JSON. se json-decode() riceve qualcosa che non è JSON valido allora restituisce null, in questa maniera blocco subito la richiesta senza provare a leggere esito e durata
 }
 
