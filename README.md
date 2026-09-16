@@ -4,8 +4,9 @@ Applicazione web che permette ad un utente autenticato di giocare al gioco dello
 
 ## Funzionalità applicazione:
 
-+ Fornire un'applicazione che permetta ad un'utente di giocare a stracciacamicia tramite un'interfaccia grafica (funzionalità fondamentale)
-+ Tener traccia dei dati di gioco e mostrarli accedendovi
++ Permettere ad un utente autenticato di giocare a Strappacamicia contro il computer tramite un'interfaccia grafica
++ Salvare nel database i risulatati e la durata delle partite giocate
++Mostrare all'utente le statistiche relative alle proprie partite 
 
 ## Modalità di utilizzo:
 
