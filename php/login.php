@@ -9,6 +9,13 @@ require_once "connessione.php";
 $datiRicevuti = file_get_contents("php://input"); // $datiRicevuti contiene il JSON dei dati ricevuti dal login
 $dati = json_decode($datiRicevuti, true); // in questa maniera trasformiamo i dati ricevuti dal formato JSON in un array associativo PHP
 
+
+id ($dati === null){
+    echo json_encode(["successo" => false]);
+    exit; //interrompo il login se i dati ricevuti non sono in formato JSON valido
+}
+
+
 if (isset($dati["nickname"]) === true && isset($dati["password"]) === true){
     $nickname = $dati["nickname"]; //così prendiamo il valore associato alla chiave "nickname" e lo salviamo nella variabile PHP $nickname
     $password = $dati["password"]; //così prendiamo il valore associato alla chiave "password" e lo salviamo nella variabile PGP $password
