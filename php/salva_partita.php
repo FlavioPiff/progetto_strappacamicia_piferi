@@ -5,7 +5,8 @@ header("Content-Type: application/json"); //specifico che la risposta inviata a 
 
 require_once "connessione.php"; //carico la connessione al database per poter salvare la partita. In questo modo questo file potrà eseguire un INSERT nella tabella partite, per poterlo fare gli serve la connessione MySQL che ho già preparato in connessione.php
 
-if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha effetuato il login, salva_partita.php non deve accettare il salvataggio di una partita se non esiste un utente autenticato. In questa maniera se qualcuno prova ad aprire o richiamare direttamente il file senza aver fatto il login alla PHP si ferma con exit; 
+if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha effetuato il login, salva_partita.php non deve accettare il salvataggio di una partita se non esiste un utente autenticato. In questa maniera se qualcuno prova ad aprire o richiamare direttamente il file senza aver fatto il login alla PHP si ferma con exit;
+    echo json_encode(["successo" => false]); //comunico a Javascript che la partita non può essere salvata perchè l'utente non ha effettuato il login
     exit;
 }
 
