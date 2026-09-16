@@ -214,6 +214,7 @@ h1 {
     cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
 
+/* LOGIN */
 
 .login {
     width: 300px;
@@ -233,6 +234,8 @@ h1 {
 .login button {
     margin-top: 15px; /*lascio un po' di spazio tra la password e il pulsante*/
 }
+
+/* PROFILO E STATISTICHE*/
 
 .profilo {
     width: 400px;
