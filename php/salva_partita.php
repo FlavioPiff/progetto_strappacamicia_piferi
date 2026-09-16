@@ -19,17 +19,13 @@ if ($dati === null){
     exit; //interrompo il salvataggio se i dati ricevuti non sono in formato JSON. se json-decode() riceve qualcosa che non è JSON valido allora restituisce null, in questa maniera blocco subito la richiesta senza provare a leggere esito e durata
 }
 
-$esito = $dati["esito"]; //recupero dai dati ricevuti l'esito della partita
-$durata = $dati["durata"]; //recupero dai dati ricevuti la durata della partita
-
 if (isset($dati["esito"]) === true && isset($dati["durata"]) === true){
-    $esito = $dati["esito"];
-    $durata = $dati["durata"];
+    $esito = $dati["esito"]; //recupero dai dati ricevuti l'esito della partita
+    $durata = $dati["durata"]; //recupero dai dati ricevuti la durata della partita
 } else {
     echo json_encode(["successo" => false]);
     exit; //interrompo il salvataggio se non sono stati inviati tutti i dati della partita (devono essere inviati sia esito che durata, se uno dei due manca allora interrompo il salvataggio) 
 }
-
 
 if ($esito !== "vittoria" && $esito !== "sconfitta"){
     echo json_encode(["successo" => false]);
