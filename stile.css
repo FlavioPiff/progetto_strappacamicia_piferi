@@ -230,6 +230,32 @@ h1 {
     box-sizing: border-box;
 }
 
-.login button{
+.login button {
     margin-top: 15px; /*lascio un po' di spazio tra la password e il pulsante*/
+}
+
+.profilo {
+    width: 400px;
+    margin: 80px auto; /*centro il contenuto del profilo nella pagina */
+    text-align: center; /*centro il testo e i collegamenti del profilo*/
+}
+
+.profilo h2 {
+    margin-top: 35px; /*lascio un po' di spazio prima delle statistiche*/
+}
+
+.profilo a { /*in questa maniera rendo i collegamenti simili a dei semplici bottoni*/
+    display: block;
+    width: 150px;
+    margin: 15px auto;
+    padding: 8px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+}
+
+.paginaProfilo {
+    background-color: #e8d6b0; /*uso lo stesso colore del tavolo da gioco come sfondo del profilo*/
+    color: black; /*rendo leggibili le scritte sullo sfondo beige*/
 }
