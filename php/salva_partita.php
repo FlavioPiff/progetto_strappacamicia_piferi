@@ -3,6 +3,13 @@
 session_start(); //avvio la sessione per poter riconoscere l'utente che ha giocato la partita. Quando salverò una partita, non farò inviare al Javascript l'id_utente ma PHP prenderà direttamente l'utente autenticato dalla sessione ($_SESSION["id_utente])
 header("Content-Type: application/json"); //specifico che la risposta inviata a Javascipt è in formato JSON
 
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST"){
+    echo json_encode(["successo" => false]); // faccio in modo di accettare solamente richieste POST per salvare una partita 
+    exit;
+}
+
+
 require_once "connessione.php"; //carico la connessione al database per poter salvare la partita. In questo modo questo file potrà eseguire un INSERT nella tabella partite, per poterlo fare gli serve la connessione MySQL che ho già preparato in connessione.php
 
 if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha effetuato il login, salva_partita.php non deve accettare il salvataggio di una partita se non esiste un utente autenticato. In questa maniera se qualcuno prova ad aprire o richiamare direttamente il file senza aver fatto il login alla PHP si ferma con exit;
