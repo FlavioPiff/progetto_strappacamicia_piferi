@@ -10,7 +10,7 @@ $datiRicevuti = file_get_contents("php://input"); // $datiRicevuti contiene il J
 $dati = json_decode($datiRicevuti, true); // in questa maniera trasformiamo i dati ricevuti dal formato JSON in un array associativo PHP
 
 
-id ($dati === null){
+if ($dati === null){
     echo json_encode(["successo" => false]);
     exit; //interrompo il login se i dati ricevuti non sono in formato JSON valido
 }
