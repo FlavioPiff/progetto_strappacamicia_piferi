@@ -113,7 +113,25 @@ Impostare come Document Root di Apache la cartella del progetto:
 
 + C:\MAMP\htdocs\progetto_strappacamicia_piferi
 
+### 4. Avviare l'applicazione
 
+Dopo aver avviato Apache e MySQL tramite MAMP, aprire il progetto dal browser.
+
+L'indirizzo è:
+
++ http://mywebapp.ingeg.it/
+
+
+La prima pagina mostrata è la pagina di login (index.html).
+
+Per accedere è necessario utilizzare uno degli utenti già presenti nel database importato.
+
++ nickname: Flavio
++ password: prova123
+
+Dopo aver effettuato correttamente il login viene mostrata la pagina del profilo (profilo.php), contenente le statistiche dell'utente.
+
+Dalla pagina del profilo è possibile iniziare una nuova partita a Strappacamicia contro il computer (gioco.php). Al termine della partita l'esito e la durata vengono salvati nel database e le statistiche dell'utente vengono aggiornate.
      
 ## LINK REGOLE GIOCO:
 
