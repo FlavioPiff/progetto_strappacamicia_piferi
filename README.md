@@ -33,40 +33,43 @@ Applicazione web che permette ad un utente autenticato di giocare al gioco dello
 
 ## Interfaccia:
 
-**1. Gioco a strappacamicia**
+**1. Pagina di login**
 
-+ Icona per indicare il mazzo in mano e sopra di esso il numero totale delle carte del mazzo
-+ Cronologia delle prese
++ Form per l'inserimento del nickname
+
++ Form per l'inserimento della password
+
++ Messaggio di errore in caso di credenziali non corrette
+
+**2. Pagina del profilo e statistiche**
+
++ Nickname dell'utente
+
++ Partite giocate
+
++ Partite vinte e perse
+
++ Percentuale di vittorie
+
++ Durata media delle partite
+
++ Collegamento per iniziare una nuova partita
+
++ Collegamento per effettuare il logout
+
+**3. Pagina di gioco**
+
++ Mazzo del giocatore e mazzo del computer con il rispettivo numero di carte
+
++ Area centrale in cui vengono mostrate le carte giocate
+
 + Cronometro della partita
-+ Scritta nickname vs CPU
 
-**2. Accesso utente**
++ Pulsante per giocare una carta
 
-+ Sfondo ben curato
-+ Form per nickname
-+ Form per password
++ Messaggio finale di vittoria o sconfitta
 
-**3. Registrazione account**
-
-+ Form per:
-1. Icona account
-2. Nome
-3. Cognome
-4. Sesso
-5. Età
-6. Paese di nascita
-7. Nickname
-8. Password
-9. Ripetizione password
-
-**4. Punteggi utente**
-
-+   Nickname
-+   Data creazione account
-+   Icona account
-+   Partite giocate
-+   Durata media partita
-+   % vittorie e sconfitte
++ Collegamento per iniziare una nuova partita
      
 ## LINK REGOLE GIOCO:
 
