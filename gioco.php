@@ -25,7 +25,7 @@ if (isset($_SESSION["id_utente"]) === false){ //controllo se l'utente non ha eff
                 <p class="tempo">Tempo: <span id="cronometro">00:00</span></p>
                 <div id="risultatoPartita">
                     <p id="testoRisultato"></p>
-                    <a href="gioco.html" id="tornaGioco">Ricomincia una nuova partita</a>
+                    <a href="gioco.php" id="tornaGioco">Ricomincia una nuova partita</a>
                 </div>
                 <div class="cpu">
                     <p class="nomeCPU">CPU</p>
