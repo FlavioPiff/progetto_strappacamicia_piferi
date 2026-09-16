@@ -217,5 +217,19 @@ h1 {
 
 .login {
     width: 300px;
-    margin: 100px auto; /*centro il login nella pagina lasciando un po' di spazio sopra*/
+    margin: 60px auto; /*centro il login nella pagina lasciando un po' di spazio tra il titolo e il form di login*/
+}
+
+.login label {
+    display: block; /* questo da andare nickname e password ordinatamente uno sotto l'altro*/
+    margin-top: 10px; /* lascio un po' di spazio tra i campi del login*/
+}
+
+.login input {
+    width: 100%; /*fa avere ai due campi la stessa larghezza*/
+    box-sizing: border-box;
+}
+
+.login button{
+    margin-top: 15px; /*lascio un po' di spazio tra la password e il pulsante*/
 }
