@@ -70,6 +70,42 @@ Applicazione web che permette ad un utente autenticato di giocare al gioco dello
 + Messaggio finale di vittoria o sconfitta
 
 + Collegamento per iniziare una nuova partita
+
+
+## Installazione e avvio del progetto
+
+### 1. Scaricare il progetto
+
++ Clonare il repository GitHub oppure scaricarlo come file ZIP.
+
+### 2. Configurare il database
+
+Avviare i server Apache e MySQL tramite MAMP.
+
+Aprire phpMyAdmin e creare un nuovo database chiamato:
+
++ strappacamicia
+
+
+Dopo selezionare il database appena creato e importare il file:
+
++ database/strappacamicia.sql
+
+
+Il file SQL permette di ricreare le tabelle 'utenti' e 'partite' e i dati necessari per utilizzare il progetto.
+
+La connessione al database utilizzata dal progetto è configurata nel file 'php/connessione.php' con i seguenti parametri:
+
+- Host: 'localhost'
+- Utente MySQL: 'root'
+- Password MySQL: 'root'
+- Database: 'strappacamicia'
+- Porta MySQL: '3306'
+
+Se si ha una configurazione di MySQL diversa vanno modificare questi valori nel file 'php/connessione.php'.
+
+
+
      
 ## LINK REGOLE GIOCO:
 
