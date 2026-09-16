@@ -378,5 +378,8 @@ function salvaPartita(esito, durata) { //funzione che useò per salvare nel data
     })
     .then(function(risultato){ //recupero il risultato del salvataggio restituito da PHP
         console.log(risultato); //questo secondo .then() mi permette di utilizzare l'oggetto del primo .then(). Per ora lo mostro solo tramite la console.
+    })
+    .catch(function(errore){
+        console.log("Errore durante il salvataggio della partita"); //mostro nella console un messaggio se si verifica un errore durante la comunicazione con PHP
     });
 }
