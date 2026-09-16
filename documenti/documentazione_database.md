@@ -41,3 +41,14 @@ La tabella 'partite' utilizza 'id_partita' come chiave primaria.
 L'attributo 'id_utente' della tabella 'partite' è una chiave esterna che fa riferimento a 'id_utente' della tabella 'utenti'.
 
 Tra le tabelle 'utenti' e 'partite' è presente una relazione uno a molti (1:N): un utente può aver giocato più partite, mentre ogni partita può essere stata giocata da un solo utente.
+
+## Schema della relazione
+
+```text
+UTENTI                         PARTITE
+-------------------            -------------------
+id_utente (PK)  1 -------- N   id_partita (PK)
+nickname                       id_utente (FK)
+password_hash                  data_partita
+                               durata
+                               esito
