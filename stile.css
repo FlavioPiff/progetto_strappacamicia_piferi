@@ -213,3 +213,9 @@ h1 {
     font-size: 16px; /* metto la dimensione della scritta come 16px*/
     cursor: pointer; /*quando passo il mouse sopra il pulsante diventa una manina*/
 }
+
+
+.login {
+    width: 300px;
+    margin: 100px auto; /*centro il login nella pagina lasciando un po' di spazio sopra*/
+}

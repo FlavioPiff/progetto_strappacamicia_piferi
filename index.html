@@ -4,21 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Strappacamicia - Login</title>
+        <link rel="stylesheet" href="stile.css"> <!-- collego il file CSS alla pagina di login-->
     </head>
 
     <body>
-        <h1 style="text-align: center;">Accedi a Strappacamicia</h1>
+        <div class="login"> <!-- contenitore che uso per sistemare graficamente il login-->
+            <h1 style="text-align: center;">Accedi a Strappacamicia</h1>
 
-        <form id="formLogin">
-            <label for="nickname">Nickname:</label>
-            <input type="text" id="nickname" name="nickname">
+            <form id="formLogin">
+                <label for="nickname">Nickname:</label>
+                <input type="text" id="nickname" name="nickname">
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
 
-            <button type="submit">Accedi</button>
-            <p id = "erroreLogin"></p> <!-- qui mostrerò un messaggio se il login non va a buon fine -->
-        </form>
+                <button type="submit">Accedi</button>
+                <p id = "erroreLogin"></p> <!-- qui mostrerò un messaggio se il login non va a buon fine -->
+            </form>
+        </div>
         <script>
                 const formLogin = document.getElementById("formLogin");
 
