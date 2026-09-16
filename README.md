@@ -105,6 +105,14 @@ La connessione al database utilizzata dal progetto è configurata nel file 'php/
 Se si ha una configurazione di MySQL diversa vanno modificare questi valori nel file 'php/connessione.php'.
 
 
+### 3. Configurare MAMP
+
+Aprire MAMP e verificare che Apache utilizzi la porta '80' e MySQL la porta '3306'.
+
+Impostare come Document Root di Apache la cartella del progetto:
+
++ C:\MAMP\htdocs\progetto_strappacamicia_piferi
+
 
      
 ## LINK REGOLE GIOCO:
